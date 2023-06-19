@@ -1,6 +1,6 @@
 papers:
   - title: "Diffusion Probabilistic Models for Structured Node Classification"
-    authors: "<b>Hyosoon Jang<b>, Seonghyun Park, Sangwoo Mo, Sungsoo Ahn"
+    authors: "<b>Hyosoon Jang</b>, Seonghyun Park, Sangwoo Mo, Sungsoo Ahn"
     paper_pdf: "/assets/publications/23_DPMSNC.pdf"
     selected: y
 
@@ -9,5 +9,5 @@ papers:
     selected: y
 
   - title: "Identifying Potential of Interactome Module for Inferring Drug Response Discrepancy"
-    authors: "<b>Hyosoon Jang<b>, Park Chihyun"
+    authors: "<b>Hyosoon Jang</b>, Park Chihyun"
     selected: y
