@@ -5,25 +5,7 @@ experiences:
     subtitle: "Machine Learning Lab."
     category: "school"
 
-  - place: "INSA Lyon"
-    time: "Spring 2022"
-    title: "Exchange student"
-    # subtitle: "MS&E"
-    category: "school"
-
-  - place: "Bagelcode"
-    time: "Summer 2021"
-    title: "Buisness Analyst, Intern"
-    subtitle: "BA Team"
-    category: "work"
-
-  - place: "Sellerhub"
-    time: "Summer 2020"
-    title: "Product Manager, Intern"
-    # subtitle: "MS&E"
-    category: "work"
-
-  - place: "POSTECH"
+  - place: "KNU"
     time: "2019 - 2022"
     title: "Bachelor"
     subtitle: "Computer Science and Engineering"
