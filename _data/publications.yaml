@@ -5,7 +5,7 @@ papers:
     selected: y
 
   - title: "Machine learning algorithms using systemic inflammatory markers for predicting the oncological outcomes of colorectal cancer after surgery"
-    authors: "Sung Yang, <b>Hyosoon Jang<b><sup>‡</sup>, Inkyu Park, Sunhye Lee, Gaeul Oh, Park Chihyun, Jeonghyun Kang"
+    authors: "Sung Yang, <b>Hyosoon Jang</b><sup>‡</sup>, Inkyu Park, Sunhye Lee, Gaeul Oh, Park Chihyun, Jeonghyun Kang"
     selected: y
 
   - title: "Identifying Potential of Interactome Module for Inferring Drug Response Discrepancy"
