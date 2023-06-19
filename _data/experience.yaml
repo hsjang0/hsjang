@@ -5,10 +5,16 @@ experiences:
     subtitle: "Machine Learning Lab."
     category: "school"
 
+ - place: "UBLBio"
+   time: "2021-2022"
+   title: "Intern"
+   subtitle: "Bioinformatics and Machine learning"
+   category: "work"
+
   - place: "KNU"
     time: "2019 - 2022"
     title: "Bachelor"
-    subtitle: "Computer Science and Engineering"
+    subtitle: "Computer Science"
     category: "school"
 # - place: "Stanford"
 #   time: "2020 - now"
