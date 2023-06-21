@@ -5,11 +5,11 @@ experiences:
     subtitle: "Machine Learning Lab."
     category: "school"
 
- - place: "UBLBio"
-   time: "2021 - 2022"
-   title: "Intern"
-   subtitle: "Bioinformatics and Machine learning"
-   category: "work"
+ #- place: "UBLBio"
+ #  time: "2021 - 2022"
+ #  title: "Intern"
+ #  subtitle: "Bioinformatics and Machine learning"
+ #  category: "work"
 
   - place: "KNU"
     time: "2019 - 2022"
