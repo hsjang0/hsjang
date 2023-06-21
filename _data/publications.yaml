@@ -1,6 +1,7 @@
 papers:
   - title: "Diffusion Probabilistic Models for Structured Node Classification"
     authors: "<b>Hyosoon Jang</b>, Seonghyun Park, Sangwoo Mo, Sungsoo Ahn"
+    venue: "ICML Structured Probabilistic Inference & Generative Modeling Workshop, 2023"
     paper_pdf: "/assets/publications/23_DPMSNC.pdf"
     selected: y
 
