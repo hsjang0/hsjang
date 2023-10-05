@@ -1,4 +1,9 @@
 papers:
+  - title: "Learning Energy Decomposition for Partial Inference of GFlowNets"
+    authors: "<b>Hyosoon Jang</b>, Minsu Kim, Sungsoo Ahn"
+    venue: "Under review"
+    selected: y
+
   - title: "Diffusion Probabilistic Models for Structured Node Classification"
     authors: "<b>Hyosoon Jang</b>, Seonghyun Park, Sangwoo Mo, Sungsoo Ahn"
     venue: "NeurIPS 2023"
@@ -10,7 +15,7 @@ papers:
     venue: "Annals of Surgical Oncology, 2023"
     selected: y
 
-  - title: "Identifying Potential of Interactome Module for Inferring Drug Response Discrepancy"
+  - title: "Identifying Potential of Interactome Module for Inferring Drug Response"
     authors: "<b>Hyosoon Jang</b>, Park Chihyun"
     venue: "Under review"
     selected: y
