@@ -1,7 +1,7 @@
 papers:
   - title: "Learning Energy Decomposition for Partial Inference of GFlowNets"
     authors: "<b>Hyosoon Jang</b>, Minsu Kim, Sungsoo Ahn"
-    venue: "ICLR 2024 <b>(oral presentation, 85/7262=1.16%)<\b>"
+    venue: "ICLR 2024 <b>(oral presentation, 85/7262=1.16%)</b>"
     paper_pdf: "/assets/publications/LED_GFlowNet-13.pdf"
     selected: y
 
