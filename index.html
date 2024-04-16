@@ -6,42 +6,6 @@ title: Home
 <div class="docs-section" id="bio">
   <h4>Bio</h4>
   Hello! I'm a graduate student at Machine Learning Lab @ POSTECH, advised by Sungsoo Ahn (2023/03~). Recently, I am highly interested in improving Generative Flow Networks (GFlowNets).  
-  <!-- <p>
-  My research develops tools for analyzing <b>large-scale social data</b>, aiming to provide a better understanding of <b>social structure and behaviors</b> online while also impacting the <b>design of digital social systems</b>. 
-  My recent work has focused on reducing political polarization online 
-  [<a href="assets/publications/2022_newsbridge/paper.pdf" target="_blank">ICWSM'22a</a>,
-  <a href="assets/publications/2022_flipfeed/paper.pdf" target="_blank">ICWSM'22b</a>,
-  <a href="assets/publications/2021_balanced_inf_max/paper.pdf" target="_blank">WSDM'21</a>,
-  <a href="assets/publications/2018_social_mirror/paper.pdf" target="_blank">WWW'18</a>],
-  improving the health of online conversations 
-  [<a href="assets/publications/2021_dtox/paper.pdf" target="_blank">WWW'21</a>, 
-  <a href="assets/publications/2021_social_catalysts/paper.pdf" target="_blank">CSCW'21</a>], 
-  and causal inference in social systems 
-  [<a href="assets/publications/2017_detecting_network_effects/paper.pdf" target="_blank">KDD'17</a>
-  <a href="assets/publications/2019_biometrika/paper.pdf" target="_blank">Biometrika'19</a>]. 
-  My research often falls at the intersections of Social Networks, Machine Learning, and Causal Inference.
-  </p> -->
-
-  <!-- <p> -->
-  <!-- <b>I'm joining the University of Washington Information School as an Assistant Professor, starting September 2023.</b> -->
-  <!-- I am currently a Postdoc at Stanford University, mentored by <a href="https://web.stanford.edu/~jugander/" target="_blank">Johan Ugander</a>. -->
-  <!-- I received my Ph.D. from MIT in 2020 under the supervision of Deb Roy.  -->
-  <!-- Before coming to MIT, I spent one year in Paris and one year in Barcelona doing a M.Sc. in Data mining and Knowledge Management.  -->
-  <!-- I got my B.Sc. from Staffordshire University with First Class honors in Computer Science.  -->
-  <!-- Throughout my graduate studies, I spent several summers doing internships in industry, including Yahoo! Labs, Amazon, LinkedIn, and Facebook. -->
-  <!-- </p>  -->
-</div>
-
-<!-- <div class="docs-section" id="prospective-students">  
-  <h4>Prospective Students</h4>
-  <p>
-  <b>I'm recruiting PhD students to start Fall 2023 at the University of Washington! </b>
-  I'm especially looking for students with a background and/or interest in <i>social network analysis, machine learning, causal inference, or natural language processing</i>, and are passionate about using computational methods to study how online social platforms can be reimagined to <i>enable better conversations, bridge political divides, and reduce the spread of misinformation</i>. 
-  If you are interested, please apply to the UW iSchool <a href="https://ischool.uw.edu/programs/phd/admissions" target="_blank">PhD program</a> and mention me in your application.
-  If you have any questions, feel free to reach out by email!
-  </p> 
-</div> -->
-
 
 <!-- ========== PUBLICATIONS ========== -->
 <div class="docs-section" id="publications">
@@ -87,78 +51,21 @@ title: Home
     </div>
   {% endfor %}
 
-<!-- ========== PROJECTS ========== 
-<div class="docs-section" id="projects">
-  <h4>Projects</h4>
 
-  <ul class="tab-nav">
-    <li><div class="button active" data-ref="#projects-selected">Selected</div></li>
-    <li><div class="button" data-ref="#projects-all">All</div></li>
-  </ul>
-
-  <div class="tab-content">
-    <div class="tab-pane active" id="projects-selected">
-      {% assign selected_projects = site.data.projects.projects | where: "selected", "y" %}
-      {% for project in selected_projects %}
-        {% assign index_modulo = forloop.index0 | modulo:3 %}
-        {% if index_modulo == 0 %}
-          <div class="row">
-        {% endif %}
-
-          <div class="four columns">
-            <div class="project-container">
-
-                <div class="project-image-container">
-                  <a href="{{ project.url }}">
-                    <img src="{{ project.thumbnail }}" class="u-max-full-width" />
-                  </a>
-                </div>
-
-                <div class="project-caption">
-                  <b>{{ project.title }}</b> <br/>
-                  {{ project.subtitle }}
-                </div>
-
-            </div>
-          </div>
-
-        {% if index_modulo == 2 %}
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-
-    <div class="tab-pane" id="projects-all">
-      {% for project in site.data.projects.projects %}
-        {% assign index_modulo = forloop.index0 | modulo:3 %}
-        {% if index_modulo == 0 %}
-          <div class="row">
-        {% endif %}
-
-          <div class="four columns">
-            <div class="project-container">
-
-                <div class="project-image-container">
-                  <a href="{{ project.url }}">
-                    <img src="{{ project.thumbnail }}" class="u-max-full-width" />
-                  </a>
-                </div>
-
-                <div class="project-caption">
-                  <b>{{ project.title }}</b> <br/>
-                  {{ project.subtitle }}
-                </div>
-
-            </div>
-          </div>
-
-        {% if index_modulo == 2 %}
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-
+<div class="docs-section" id="invited">  
+  <h4>Invited Talks</h4>
+  <p>
+  <b> MILA. </b>, GFN Workshop, <i> Learning Energy Decompositions for Partial Inference in GFlowNets</i>, Apr 2024 
+  </p> 
 </div>
--->
 
+
+<div class="docs-section" id="honor">  
+  <h4>Honors and Awards</h4>
+  <p>
+  <b> Presidential Science Scholarship </b>, 2024 
+  </p> 
+  <p>
+  <b> National Excellence Scholarship (Natural Sciences and Engineering) </b>, 2021 
+  </p> 
+</div>
