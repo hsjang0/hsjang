@@ -17,6 +17,11 @@ papers:
     paper_pdf: "/assets/publications/23_DPMSNC.pdf"
     selected: y
 
+  - title: "De novo Drug Design through Gradient-based Regularized Search in Information-theoretically Controlled Latent Space"
+    authors: "Hyosoon Jang, Sangmin Seo, Sanghyun Park, Byung Ju Kim, Geon-Woo Choi, Jonghwan Choi, Chihyun Park"
+    venue: "Journal of Computer-Aided Molecular Design, 2024"
+    selected: y
+
   - title: "Machine learning algorithms using systemic inflammatory markers for predicting the oncological outcomes of colorectal cancer after surgery"
     authors: "Songsoo Yang<sup>‡</sup>, <b>Hyosoon Jang</b><sup>‡</sup>, Inkyu Park<sup>‡</sup>, Sunhye Lee, Gaeul Oh, Park Chihyun, Jeonghyun Kang"
     venue: "Annals of Surgical Oncology, 2023"
