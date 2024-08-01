@@ -18,7 +18,7 @@ papers:
     selected: y
 
   - title: "De novo Drug Design through Gradient-based Regularized Search in Information-theoretically Controlled Latent Space"
-    authors: "Hyosoon Jang, Sangmin Seo, Sanghyun Park, Byung Ju Kim, Geon-Woo Choi, Jonghwan Choi, Chihyun Park"
+    authors: "<b>Hyosoon Jang</b>, Sangmin Seo, Sanghyun Park, Byung Ju Kim, Geon-Woo Choi, Jonghwan Choi, Chihyun Park"
     venue: "Journal of Computer-Aided Molecular Design, 2024"
     selected: y
 
