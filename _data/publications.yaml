@@ -1,4 +1,10 @@
 papers:
+
+  - title: "Can LLMs Generate Diverse Molecules? Towards Alignment with Structural Diversity"
+    authors: "<b>Hyosoon Jang</b>, Yunhui Jang, Jaehyung Kim, Sungsoo Ahn"
+    venue: "Under review"
+    selected: y
+
   - title: "Pessimistic Backward Policy for GFlowNets"
     authors: "<b>Hyosoon Jang</b>, Yunhui Jang, Minsu Kim, Jinkyoo Park, Sungsoo Ahn"
     venue: "NeurIPS 2024"
