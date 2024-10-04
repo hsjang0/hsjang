@@ -4,6 +4,7 @@ papers:
     authors: "<b>Hyosoon Jang</b>, Yunhui Jang, Jaehyung Kim, Sungsoo Ahn"
     venue: "Under review"
     selected: y
+    paper_pdf: "/assets/publications/LLMs_for_Diverse_Molecule_Discovery__Copy_.pdf"
 
   - title: "Pessimistic Backward Policy for GFlowNets"
     authors: "<b>Hyosoon Jang</b>, Yunhui Jang, Minsu Kim, Jinkyoo Park, Sungsoo Ahn"
