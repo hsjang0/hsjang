@@ -9,7 +9,7 @@ papers:
   - title: "[Conference] Pessimistic Backward Policy for GFlowNets"
     authors: "<b>Hyosoon Jang</b>, Yunhui Jang, Minsu Kim, Jinkyoo Park, Sungsoo Ahn"
     venue: "NeurIPS 2024"
-    paper_pdf: "/assets/publications/2405.16012v1.pdf"
+    paper_pdf: "/assets/publications/pbp.pdf"
     selected: y
 
   - title: "[Conference] Learning Energy Decomposition for Partial Inference in GFlowNets"
