@@ -1,35 +1,35 @@
 papers:
 
-  - title: "[Preprint] Can LLMs Generate Diverse Molecules? Towards Alignment with Structural Diversity"
+  - title: "[P1] Can LLMs Generate Diverse Molecules? Towards Alignment with Structural Diversity"
     authors: "<b>Hyosoon Jang</b>, Yunhui Jang, Jaehyung Kim, Sungsoo Ahn"
     venue: "Under review"
     selected: y
     paper_pdf: "/assets/publications/LLMs_for_Diverse_Molecule_Discovery__Copy_.pdf"
 
-  - title: "[Conference] Pessimistic Backward Policy for GFlowNets"
+  - title: "[C3] Pessimistic Backward Policy for GFlowNets"
     authors: "<b>Hyosoon Jang</b>, Yunhui Jang, Minsu Kim, Jinkyoo Park, Sungsoo Ahn"
     venue: "NeurIPS 2024"
     paper_pdf: "/assets/publications/pbp.pdf"
     selected: y
 
-  - title: "[Conference] Learning Energy Decomposition for Partial Inference in GFlowNets"
+  - title: "[C2] Learning Energy Decomposition for Partial Inference in GFlowNets"
     authors: "<b>Hyosoon Jang</b>, Minsu Kim, Sungsoo Ahn"
     venue: "ICLR 2024 <b>(oral presentation, 85/7262=1.16%)</b>"
     paper_pdf: "/assets/publications/LED_GFlowNet-13.pdf"
     selected: y
 
-  - title: "[Conference] Diffusion Probabilistic Models for Structured Node Classification"
+  - title: "[C1] Diffusion Probabilistic Models for Structured Node Classification"
     authors: "<b>Hyosoon Jang</b>, Seonghyun Park, Sangwoo Mo, Sungsoo Ahn"
     venue: "NeurIPS 2023"
     paper_pdf: "/assets/publications/23_DPMSNC.pdf"
     selected: y
 
-  - title: "[Journal] De novo Drug Design through Gradient-based Regularized Search in Information-theoretically Controlled Latent Space"
+  - title: "[J2] De novo Drug Design through Gradient-based Regularized Search in Information-theoretically Controlled Latent Space"
     authors: "<b>Hyosoon Jang</b>, Sangmin Seo, Sanghyun Park, Byung Ju Kim, Geon-Woo Choi, Jonghwan Choi, Chihyun Park"
     venue: "Journal of Computer-Aided Molecular Design 38 (1)"
     selected: y
 
-  - title: "[Journal] Machine learning algorithms using systemic inflammatory markers for predicting the oncological outcomes of colorectal cancer after surgery"
+  - title: "[J1] Machine learning algorithms using systemic inflammatory markers for predicting the oncological outcomes of colorectal cancer after surgery"
     authors: "Songsoo Yang<sup>‡</sup>, <b>Hyosoon Jang</b><sup>‡</sup>, Inkyu Park<sup>‡</sup>, Sunhye Lee, Gaeul Oh, Chihyun Park*, Jeonghyun Kang*"
     venue: "Annals of Surgical Oncology 30 (13)"
     selected: y
