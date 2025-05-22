@@ -1,5 +1,11 @@
 papers:
 
+  - title: "[P2] Self-Training Large Language Models with Confident Reasoning"
+    authors: "<b>Hyosoon Jang</b>, Yunhui Jang, Yunhui Jang, Sungjae Lee, Jungseul Ok, Sungsoo Ahn"
+    venue: "Under review"
+    selected: y
+    paper_pdf: "/assets/publications/Confidence_Self_Training_of_LLMs (40).pdf"
+
   - title: "[P1] Can LLMs Generate Diverse Molecules? Towards Alignment with Structural Diversity"
     authors: "<b>Hyosoon Jang</b>, Yunhui Jang, Jaehyung Kim, Sungsoo Ahn"
     venue: "Under review"
