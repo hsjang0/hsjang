@@ -1,6 +1,6 @@
 papers:
 
-  - title: "[P2] Self-Training Large Language Models with Confident Reasoning"
+  - title: "[C4] Self-Training Large Language Models with Confident Reasoning"
     authors: "<b>Hyosoon Jang</b>, Yunhui Jang, Sungjae Lee, Jungseul Ok, Sungsoo Ahn"
     venue: "EMNLP 2025 (Findings)"
     selected: y
