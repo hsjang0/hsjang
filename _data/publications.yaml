@@ -8,7 +8,7 @@ papers:
 
   - title: "[P1] Can LLMs Generate Diverse Molecules? Towards Alignment with Structural Diversity"
     authors: "<b>Hyosoon Jang</b>, Yunhui Jang, Jaehyung Kim, Sungsoo Ahn"
-    venue: "Under review"
+    venue: "Preprint"
     selected: y
     paper_pdf: "/assets/publications/LLMs_for_Diverse_Molecule_Discovery__Copy_.pdf"
 
