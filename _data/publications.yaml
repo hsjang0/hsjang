@@ -4,12 +4,14 @@ papers:
     authors: "<b>Hyosoon Jang</b>, Hyunjin Seo, Yunhui Jang, Seonghyun Park, Sungsoo Ahn"
     venue: "Preprint"
     selected: y
+    image: "/assets/publications/Boltz_as_FM.png"
     paper_pdf: "/assets/publications/Boltz_as_FM.pdf"
 
   - title: "[C4] Self-Training Large Language Models with Confident Reasoning"
     authors: "<b>Hyosoon Jang</b>, Yunhui Jang, Sungjae Lee, Jungseul Ok, Sungsoo Ahn"
     venue: "EMNLP 2025 (Findings)"
     selected: y
+    image: "/assets/publications/Confidence_Self_Training_of_LLMs.png"
     paper_pdf: "/assets/publications/Confidence_Self_Training_of_LLMs (41).pdf"
 
   - title: "[P1] Can LLMs Generate Diverse Molecules? Towards Alignment with Structural Diversity"
@@ -21,18 +23,21 @@ papers:
   - title: "[C3] Pessimistic Backward Policy for GFlowNets"
     authors: "<b>Hyosoon Jang</b>, Yunhui Jang, Minsu Kim, Jinkyoo Park, Sungsoo Ahn"
     venue: "NeurIPS 2024"
+    image: "/assets/publications/pbp.png"
     paper_pdf: "/assets/publications/pbp.pdf"
     selected: y
 
   - title: "[C2] Learning Energy Decomposition for Partial Inference in GFlowNets"
     authors: "<b>Hyosoon Jang</b>, Minsu Kim, Sungsoo Ahn"
     venue: "ICLR 2024 <b>(oral presentation, 85/7262=1.16%)</b>"
+    image: "/assets/publications/LED_GFlowNet-13.png"
     paper_pdf: "/assets/publications/LED_GFlowNet-13.pdf"
     selected: y
 
   - title: "[C1] Diffusion Probabilistic Models for Structured Node Classification"
     authors: "<b>Hyosoon Jang</b>, Seonghyun Park, Sangwoo Mo, Sungsoo Ahn"
     venue: "NeurIPS 2023"
+    image: "/assets/publications/23_DPMSNC.png"
     paper_pdf: "/assets/publications/23_DPMSNC.pdf"
     selected: y
 

@@ -14,7 +14,24 @@ h4 {
   font-size: 22px;
   margin-top: 5px; }
 .paper {
-  margin-bottom: 20px }
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.paper-thumb {
+  flex: 0 0 280px;
+}
+.paper-thumb img {
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.paper-content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
 .paper .title {
   /*text-transform: uppercase; */}
 .paper p {
@@ -75,6 +92,15 @@ h4 {
 @media (min-width: 550px) {
   .header {
     margin-top: 5rem; }
+}
+
+@media (max-width: 749px) {
+  .paper {
+    display: block;
+  }
+  .paper-thumb {
+    margin-bottom: 10px;
+  }
 }
 
 /* Larger than tablet */
