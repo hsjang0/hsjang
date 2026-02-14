@@ -20,7 +20,7 @@ h4 {
   align-items: flex-start;
 }
 .paper-thumb {
-  flex: 0 0 280px;
+  flex: 0 0 clamp(140px, 28%, 240px);
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -99,14 +99,12 @@ h4 {
     margin-top: 5rem; }
 }
 
-@media (max-width: 749px) {
+@media (max-width: 520px) {
   .paper {
-    display: block;
+    gap: 12px;
   }
   .paper-thumb {
-    margin-bottom: 10px;
-    width: 100%;
-    max-width: 320px;
+    flex-basis: 120px;
   }
 }
 
