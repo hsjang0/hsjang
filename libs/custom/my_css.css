@@ -21,17 +21,13 @@ h4 {
 }
 .paper-thumb {
   flex: 0 0 clamp(140px, 28%, 240px);
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   background: #fff;
 }
 .paper-thumb img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
+  height: auto;
   display: block;
 }
 .paper-content {
