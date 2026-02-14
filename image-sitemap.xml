@@ -1,0 +1,21 @@
+---
+layout: null
+permalink: /image-sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  {% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
+  {% for paper in selected_papers %}
+    {% if paper.image %}
+  <url>
+    <loc>{{ '/index.html#publications' | absolute_url }}</loc>
+    <image:image>
+      <image:loc>{{ paper.image | absolute_url }}</image:loc>
+      <image:title>{{ paper.title | strip_html | escape }}</image:title>
+      <image:caption>{{ paper.venue | strip_html | escape }}</image:caption>
+    </image:image>
+  </url>
+    {% endif %}
+  {% endfor %}
+</urlset>

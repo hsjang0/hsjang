@@ -23,7 +23,7 @@ title: Home
     <div class="paper">
       {% if paper.image %}
         <div class="paper-thumb">
-          <img src="{{ paper.image | prepend: site.baseurl }}" alt="{{ paper.title }} thumbnail" loading="lazy">
+          <img src="{{ paper.image | prepend: site.baseurl }}" alt="{{ paper.title }} thumbnail" loading="lazy" decoding="async" data-author="Hyosoon Jang">
         </div>
       {% endif %}
       <div class="paper-content">
@@ -79,3 +79,35 @@ title: Home
   <b>Merit-based Scholarship</b>, 2019-2020 
   </p> 
 </div>
+
+{% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "{{ '/' | absolute_url }}#hyosoon-jang",
+      "name": "Hyosoon Jang",
+      "url": "{{ '/' | absolute_url }}"
+    }{% for paper in selected_papers %},
+    {
+      "@type": "ScholarlyArticle",
+      "headline": {{ paper.title | strip_html | jsonify }},
+      "name": {{ paper.title | strip_html | jsonify }},
+      "author": [
+        {% assign author_list = paper.authors | strip_html | split: "," %}
+        {% for author in author_list %}
+        {
+          "@type": "Person",
+          "name": {{ author | strip | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ],
+      "description": {{ paper.venue | strip_html | jsonify }}{% if paper.image %},
+      "image": {{ paper.image | absolute_url | jsonify }}{% endif %}{% if paper.paper_pdf %},
+      "url": {{ paper.paper_pdf | absolute_url | jsonify }}{% endif %}
+    }{% endfor %}
+  ]
+}
+</script>

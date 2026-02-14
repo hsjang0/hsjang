@@ -6,12 +6,22 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>{{ site.data.main_info.name }} | {{ page.title }}</title>
-  <meta name="description" content="Hyosoon Jang">
-  <meta name="author" content="Hyosoon Jang">
+  <meta name="description" content="{{ page.description | default: 'Hyosoon Jang personal website' }}">
+  <meta name="author" content="{{ page.author | default: site.data.main_info.name }}">
+  <meta name="keywords" content="{{ page.keywords | default: 'Hyosoon Jang, Machine Learning, Generative Models, GFlowNets, Diffusion, LLM' }}">
+  <meta name="robots" content="{{ page.robots | default: 'index, follow' }}">
+  <meta name="theme-color" content="#ffffff">
   <meta property="og:title" content="Hyosoon Jang" />
   <meta property="og:type" content="website" />
+  <meta property="og:description" content="{{ page.description | default: 'Hyosoon Jang personal website' }}" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <meta property="og:image" content='{{ page.og_image | default: site.data.main_info.profile_pic | prepend: site.baseurl }}' />
   <!-- <meta property="og:url" content="http://www.martinsaveski.com" /> -->
   <meta property="og:site_name" content="Hyosoon Jang" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ site.data.main_info.name }} | {{ page.title }}" />
+  <meta name="twitter:description" content="{{ page.description | default: 'Hyosoon Jang personal website' }}" />
+  <meta name="twitter:image" content='{{ page.og_image | default: site.data.main_info.profile_pic | prepend: site.baseurl }}' />
   <!-- <link rel="canonical" href="http://www.martinsaveski.com" /> -->
 
   <!-- Mobile Specific Metas
@@ -69,7 +79,7 @@
     <section class="header">
       <div class="row">
         <div class="three columns">
-          <a href="{{ site.baseurl }}/"><img class="u-max-full-width" src='{{ site.baseurl }}{{ site.data.main_info.profile_pic }}'></a>
+          <a href="{{ site.baseurl }}/"><img class="u-max-full-width" src='{{ site.baseurl }}{{ site.data.main_info.profile_pic }}' alt="{{ site.data.main_info.name }} profile photo" loading="eager" decoding="async" data-author="Hyosoon Jang"></a>
         </div>
         <div class="nine columns main-description">
             <h1>{{ site.data.main_info.name }}</h1>
