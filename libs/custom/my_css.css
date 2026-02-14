@@ -21,12 +21,17 @@ h4 {
 }
 .paper-thumb {
   flex: 0 0 280px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 .paper-thumb img {
   width: 100%;
-  height: auto;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 .paper-content {
   flex: 1 1 auto;
@@ -100,6 +105,8 @@ h4 {
   }
   .paper-thumb {
     margin-bottom: 10px;
+    width: 100%;
+    max-width: 320px;
   }
 }
 
