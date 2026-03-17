@@ -8,7 +8,7 @@
   <title>{{ site.data.main_info.name }} | {{ page.title }}</title>
   <meta name="description" content="{{ page.description | default: 'Hyosoon Jang personal website' }}">
   <meta name="author" content="{{ page.author | default: site.data.main_info.name }}">
-  <meta name="keywords" content="{{ page.keywords | default: 'Hyosoon Jang, Machine Learning, Generative Models, GFlowNets, Diffusion, LLM' }}">
+  <meta name="keywords" content="{{ page.keywords | default: 'Hyosoon Jang, 장효순, Machine Learning, Generative Models, GFlowNets, Diffusion, LLM' }}">
   <meta name="robots" content="{{ page.robots | default: 'index, follow' }}">
   <meta name="theme-color" content="#ffffff">
   <meta property="og:title" content="Hyosoon Jang" />
@@ -93,11 +93,11 @@
               <span onclick="window.open('{{ site.data.main_info.github }}')" style="cursor: pointer">
                 <i class="fa fa-github" aria-hidden="true"></i>
               </span>
-              
+
               <span onclick="window.open('{{ site.data.main_info.linkedin }}')" style="cursor: pointer">
                 <i class="fa fa-linkedin-square" aria-hidden="true"></i>
               </span>
-              
+
               <!-- <span onclick="window.open('{{ site.data.main_info.twitter }}')" style="cursor: pointer">
                 <i class="fa fa-twitter" aria-hidden="true"></i>
               </span> -->
@@ -135,9 +135,11 @@
           <span onclick="window.open('{{ site.data.main_info.github }}')" style="cursor: pointer">
             <i class="fa fa-github" aria-hidden="true"></i>
           </span>
-          <!-- <span onclick="window.open('{{ site.data.main_info.linkedin }}')" style="cursor: pointer">
+          {% if site.data.main_info.linkedin %}
+          <span onclick="window.open('{{ site.data.main_info.linkedin }}')" style="cursor: pointer">
             <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-          </span> -->
+          </span>
+          {% endif %}
           <!-- <span onclick="window.open('{{ site.data.main_info.twitter }}')" style="cursor: pointer">
             <i class="fa fa-twitter" aria-hidden="true"></i>
           </span> -->
