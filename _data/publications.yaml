@@ -1,5 +1,12 @@
 papers:
 
+  - title: "[P2] Atom-level Protein Representation Learning Improves Protein Structure Prediction"
+    authors: "<b>Hyosoon Jang</b><sup>‡</sup>, Taewon Kim<sup>‡</sup>, Hyunjin Seo, Seonghwan Seo, Hyeongwoo Kim, Wonho Zhung, Mingyeong Shin, Wooyoun Kim, Sungsoo Ahn"
+    venue: "Preprint"
+    selected: y
+    image: "/assets/publications/kfold_struct_rep.png"
+    paper_pdf: "/assets/publications/kfold_struct_rep.pdf"
+
   - title: "[P2] A Systematic Evaluation of Co-folding Model Representations for Small-Molecule Learning"
     authors: "<b>Hyosoon Jang</b>, Hyunjin Seo, Honghui Kim, Seonghyun Park, Taewon Kim, Yunhui Jang, Sungsoo Ahn"
     venue: "Preprint"
