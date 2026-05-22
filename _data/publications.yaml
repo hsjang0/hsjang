@@ -1,7 +1,7 @@
 papers:
 
-  - title: "[P2] Boltz is a Strong Baseline for Atom-level Representation Learning"
-    authors: "<b>Hyosoon Jang</b>, Hyunjin Seo, Yunhui Jang, Seonghyun Park, Sungsoo Ahn"
+  - title: "[P2] A Systematic Evaluation of Co-folding Model Representations for Small-Molecule Learning"
+    authors: "<b>Hyosoon Jang</b>, Hyunjin Seo, Honghui Kim, Seonghyun Park, Taewon Kim, Yunhui Jang, Sungsoo Ahn"
     venue: "Preprint"
     selected: y
     image: "/assets/publications/Boltz_as_FM.png"
