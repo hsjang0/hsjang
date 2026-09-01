@@ -2,28 +2,28 @@ papers:
 
   - title: "[P3] Atom-level Protein Representation Learning Improves Protein Structure Prediction"
     authors: "<b>Hyosoon Jang</b><sup>‡</sup>, Taewon Kim<sup>‡</sup>, Hyunjin Seo, Seonghwan Seo, Hyeongwoo Kim, Wonho Zhung, Mingyeong Shin, Wooyoun Kim, Sungsoo Ahn"
-    venue: "Preprint"
+    venue: "Preprint, 2026"
     selected: y
     image: "/assets/publications/kfold_struct_rep.png"
     paper_pdf: "/assets/publications/kfold_struct_rep.pdf"
 
   - title: "[P2] A Systematic Evaluation of Co-folding Model Representations for Small-Molecule Learning"
     authors: "<b>Hyosoon Jang</b>, Hyunjin Seo, Honghui Kim, Seonghyun Park, Taewon Kim, Yunhui Jang, Sungsoo Ahn"
-    venue: "Preprint"
+    venue: "Preprint, 2026"
     selected: y
     image: "/assets/publications/Boltz_as_FM.png"
     paper_pdf: "/assets/publications/Boltz_as_FM.pdf"
 
   - title: "[C4] Self-Training Large Language Models with Confident Reasoning"
     authors: "<b>Hyosoon Jang</b>, Yunhui Jang, Sungjae Lee, Jungseul Ok, Sungsoo Ahn"
-    venue: "EMNLP 2025 (findings)"
+    venue: "Findings of Empirical Methods in Natural Language Processing (EMNLP), 2025"
     selected: y
     image: "/assets/publications/Confidence_Self_Training_of_LLMs.png"
     paper_pdf: "/assets/publications/Confidence_Self_Training_of_LLMs (41).pdf"
 
   - title: "[P1] Can LLMs Generate Diverse Molecules? Towards Alignment with Structural Diversity"
     authors: "<b>Hyosoon Jang</b>, Yunhui Jang, Jaehyung Kim, Sungsoo Ahn"
-    venue: "Preprint"
+    venue: "Preprint, 2025"
     selected: y
     paper_pdf: "/assets/publications/LLMs_for_Diverse_Molecule_Discovery__Copy_.pdf"
     image: "/assets/publications/LLMs_for_Diverse_Molecule_Discovery__Copy_.png"
@@ -31,21 +31,21 @@ papers:
 
   - title: "[C3] Pessimistic Backward Policy for GFlowNets"
     authors: "<b>Hyosoon Jang</b>, Yunhui Jang, Minsu Kim, Jinkyoo Park, Sungsoo Ahn"
-    venue: "NeurIPS 2024"
+    venue: "Neural Information Processing Systems (NeurIPS), 2024"
     image: "/assets/publications/pbp.png"
     paper_pdf: "/assets/publications/pbp.pdf"
     selected: y
 
   - title: "[C2] Learning Energy Decomposition for Partial Inference in GFlowNets"
     authors: "<b>Hyosoon Jang</b>, Minsu Kim, Sungsoo Ahn"
-    venue: "ICLR 2024 <b>(oral presentation, 85/7262=1.16%)</b>"
+    venue: "Interational Conference on Learning Representation (ICLR, <b>oral presentation, 85/7262=1.16%</b>), 2024"
     image: "/assets/publications/LED_GFlowNet-13.png"
     paper_pdf: "/assets/publications/LED_GFlowNet-13.pdf"
     selected: y
 
   - title: "[C1] Diffusion Probabilistic Models for Structured Node Classification"
     authors: "<b>Hyosoon Jang</b>, Seonghyun Park, Sangwoo Mo, Sungsoo Ahn"
-    venue: "NeurIPS 2023"
+    venue: "Neural Information Processing Systems (NeurIPS), 2023"
     image: "/assets/publications/23_DPMSNC.png"
     paper_pdf: "/assets/publications/23_DPMSNC.pdf"
     selected: y
