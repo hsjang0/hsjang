@@ -214,7 +214,6 @@ p:last-child { margin-bottom: 0; }
   font-size: 16px;
   margin-bottom: 18px;
 }
-.hero-role strong { color: var(--text); font-weight: 600; }
 
 .hero-links {
   display: flex;
@@ -268,7 +267,6 @@ p:last-child { margin-bottom: 0; }
   font-size: 17.5px;
   line-height: 1.66;
 }
-.prose b, .prose strong { font-weight: 600; }
 
 .ref {
   font-size: .8em;
@@ -381,7 +379,8 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   margin-bottom: 5px;
 }
 .paper-authors { font-size: 14.5px; color: var(--text-muted); line-height: 1.55; margin-bottom: 3px; }
-.paper-authors b { color: var(--text); font-weight: 600; }
+/* The author's own name is set apart by colour alone, not weight. */
+.paper-authors .me { color: var(--text); }
 .paper-venue { font-size: 14px; color: var(--text-faint); margin-bottom: 11px; }
 
 .paper-links { display: flex; flex-wrap: wrap; gap: 6px; }
