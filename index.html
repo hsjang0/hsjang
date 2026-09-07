@@ -2,103 +2,182 @@
 layout: default
 title: Home
 ---
-<!-- ========== BIO ========== -->
-<div class="docs-section" id="bio">
-  <h4>About Me</h4>
-<p>
-  I'm Hyosoon Jang, a Ph.D. student advised by Sungsoo Ahn at KAIST
-  (2025.09&ndash;; previously at POSTECH, 2023.03&ndash;2025.09).
-  My research focuses on drug discovery, with recent work on foundation models
-  for molecular learning <b>[P2,P3]</b> and prior work on generative modeling
-  approaches including Large Language Models (LLMs) <b>[P1,C4]</b>,
-  Generative Flow Networks (GFlowNets) <b>[C2,C3]</b>,
-  Diffusion Probabilistic Models (DPMs) <b>[C1]</b>, and
-  Variational Autoencoders (VAEs) <b>[J2]</b>. I am also interested in
-  machine learning for medical domains <b>[J1]</b>.
-</p>
+{% assign info = site.data.main_info %}
 
-<p>
-  Recently, I have been participating in the Korean AI-specialized foundation
-  model project (특파모), <b>K-Fold</b>, since October 2025. The project is supported by
-  a large-scale computing environment with <b>256&times; NVIDIA B200 GPUs</b>.
-  In this project, I lead the development of one of the main components:
-  <i>protein representation learning methods for protein co-folding</i> <b>[P3]</b>.
-</p>
-  <p> </p>
-</div>
+<!-- ========== HERO ========== -->
+<section class="wrap hero">
+  <img class="hero-photo" src="{{ info.profile_pic | relative_url }}"
+       alt="{{ info.name }}" width="148" height="197" fetchpriority="high" decoding="async">
+  <div>
+    <h1>{{ info.name }}<span class="name-ko">{{ info.name_ko }}</span></h1>
+    <p class="hero-role">{{ info.title }} &middot; <strong>{{ info.affiliation }}</strong></p>
+
+    <div class="hero-links">
+      <a class="icon-link" href="mailto:{{ info.email }}">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/>
+        </svg>Email
+      </a>
+
+      {% if info.google_scholar %}
+      <a class="icon-link" href="{{ info.google_scholar }}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2 1 8.5l11 6.5 11-6.5L12 2z"/>
+          <path d="M5 12.2V17c0 2 3.1 3.6 7 3.6s7-1.6 7-3.6v-4.8l-7 4.1-7-4.1z"/>
+        </svg>Google Scholar
+      </a>
+      {% endif %}
+
+      {% if info.github %}
+      <a class="icon-link" href="{{ info.github }}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/>
+        </svg>GitHub
+      </a>
+      {% endif %}
+
+      {% if info.linkedin %}
+      <a class="icon-link" href="{{ info.linkedin }}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95 4.02 0 4.76 2.5 4.76 5.76V21h-4v-5.6c0-1.34-.02-3.06-1.9-3.06-1.9 0-2.19 1.45-2.19 2.96V21h-4V9z"/>
+        </svg>LinkedIn
+      </a>
+      {% endif %}
+
+      {% if info.cv %}
+      <a class="icon-link" href="{{ info.cv | relative_url }}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/>
+        </svg>CV
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section class="wrap section" id="about">
+  <h2 class="section-title">About</h2>
+  <div class="prose">
+    <p>
+      I'm Hyosoon Jang, a Ph.D. student advised by
+      <a href="https://sungsoo-ahn.github.io/" target="_blank" rel="noopener">Sungsoo Ahn</a>
+      at KAIST (2025.09&ndash;; previously at POSTECH, 2023.03&ndash;2025.09).
+      My research focuses on <b>drug discovery</b>, with recent work on foundation models for
+      protein and molecular learning <a class="ref" href="#P2">P2</a>,&nbsp;<a class="ref" href="#P3">P3</a>, and earlier work on
+      generative modeling &mdash; large language models <a class="ref" href="#P1">P1</a>,&nbsp;<a class="ref" href="#C4">C4</a>,
+      generative flow networks <a class="ref" href="#C2">C2</a>,&nbsp;<a class="ref" href="#C3">C3</a>,
+      diffusion probabilistic models <a class="ref" href="#C1">C1</a>, and
+      variational autoencoders <a class="ref" href="#J2">J2</a>.
+      I am also interested in machine learning for medical domains <a class="ref" href="#J1">J1</a>.
+    </p>
+    <p>
+      Since October 2025 I have been part of the Korean AI-specialized foundation model project
+      (특파모), <b>K-Fold</b>, supported by a large-scale computing environment of
+      256&times; NVIDIA B200 GPUs. There I lead the development of one of the main components:
+      protein representation learning for protein co-folding
+      <a class="ref" href="#P3">P3</a>.
+    </p>
+  </div>
+</section>
+
+<!-- ========== NEWS ========== -->
+{% if site.data.news.items and site.data.news.items.size > 0 %}
+<section class="wrap section" id="news">
+  <h2 class="section-title">News</h2>
+  <div class="news">
+    {% for item in site.data.news.items %}
+    <div class="news-item">
+      <div class="news-date">{{ item.date }}</div>
+      <div class="news-text">{{ item.text }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 
 <!-- ========== PUBLICATIONS ========== -->
-<div class="docs-section" id="publications">
-  <h4>Publications</h4>
+{% assign papers = site.data.publications.papers | where: "selected", "y" %}
+<section class="wrap section" id="publications">
+  <h2 class="section-title">Publications</h2>
+  <p class="note"><sup>&Dagger;</sup> equal contribution &middot; * corresponding author</p>
 
-  <p></p><sup>‡</sup> indicates equal contribution.
-  </p>
-
-
-
-  {% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
-  {% for paper in selected_papers %}
-    <div class="paper">
+  <div class="papers">
+    {% for paper in papers %}
+    <article class="paper{% unless paper.image %} no-thumb{% endunless %}" id="{{ paper.tag }}">
       {% if paper.image %}
-        <div class="paper-thumb">
-          <img src="{{ paper.image | prepend: site.baseurl }}" alt="{{ paper.title }} thumbnail" loading="lazy" decoding="async" data-author="Hyosoon Jang">
-        </div>
-      {% endif %}
-      <div class="paper-content">
-        <p class="title"><b>{{ paper.title }}</b></p>
-        <p>{{ paper.authors }}</p>
-        <p><i>{{ paper.venue }}</i></p>
-         <div class="paper-buttons">
-          {% if paper.paper_pdf %}
-            <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-          {% endif %}
-
-          {% if paper.slides %}
-            <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
-          {% endif %}
-
-          {% if paper.poster %}
-            <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-          {% endif %}
-
-          {% if paper.video %}
-            <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
-          {% endif %}
-
-          {% if paper.code %}
-            <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-          {% endif %}
-
-          {% if paper.data %}
-            <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
-          {% endif %}
-        </div>
+      <div class="paper-thumb">
+        <img src="{{ paper.image | relative_url }}" alt="{{ paper.title | strip_html | escape }}"
+             loading="lazy" decoding="async">
       </div>
+      {% endif %}
+
+      <div class="paper-body">
+        <div class="paper-meta">
+          {% if paper.tag %}<span class="badge-tag">{{ paper.tag }}</span>{% endif %}
+          <span class="badge{% if paper.highlight %} is-highlight{% endif %}">
+            {{ paper.venue_short }}{% if paper.year %} {{ paper.year }}{% endif %}{% if paper.highlight %} &middot; {{ paper.highlight }}{% endif %}
+          </span>
+        </div>
+
+        <h3 class="paper-title">{{ paper.title }}</h3>
+        <p class="paper-authors">{{ paper.authors }}</p>
+        <p class="paper-venue">{{ paper.venue }}</p>
+
+        {% if paper.links %}
+        <div class="paper-links">
+          {% for link in paper.links %}
+            {% if link.url contains '://' %}
+              <a class="btn" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+            {% else %}
+              <a class="btn" href="{{ link.url | relative_url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ========== TALKS ========== -->
+{% if site.data.talks.items and site.data.talks.items.size > 0 %}
+<section class="wrap section" id="talks">
+  <h2 class="section-title">Invited Talks</h2>
+  <div class="entries">
+    {% for talk in site.data.talks.items %}
+    <div class="entry">
+      <div class="entry-main">
+        <div class="entry-title">{{ talk.venue }}{% if talk.host %} &middot; <span style="font-weight:400">{{ talk.host }}</span>{% endif %}</div>
+        <div class="entry-sub">{{ talk.title }}</div>
+      </div>
+      <div class="entry-date">{{ talk.date }}</div>
     </div>
-  {% endfor %}
-</div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 
-<div class="docs-section" id="invited">  
-  <h4>Invited Talks</h4>
-  <p>
-  <b>UMICH</b>, Stella group, <i> GFlowNets</i>, Jan 2025 <br>
-  <b>ICLR</b>, Oral session, <i> Learning Energy Decompositions for Partial Inference in GFlowNets</i>, May 2024 <br>
-  <b>MILA</b>, GFlowNet reading group, <i> Learning Energy Decompositions for Partial Inference in GFlowNets</i>, Apr 2024 
-  </p> 
-</div>
+<!-- ========== AWARDS ========== -->
+{% if site.data.awards.items and site.data.awards.items.size > 0 %}
+<section class="wrap section" id="awards">
+  <h2 class="section-title">Honors &amp; Awards</h2>
+  <div class="entries">
+    {% for award in site.data.awards.items %}
+    <div class="entry">
+      <div class="entry-main">
+        <div class="entry-title">{{ award.title }}</div>
+        {% if award.sub %}<div class="entry-sub">{{ award.sub }}</div>{% endif %}
+      </div>
+      <div class="entry-date">{{ award.date }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 
-
-<div class="docs-section" id="honor">  
-  <h4>Honors and Awards</h4>
-  <p>
-  <b>Postechian Fellowship</b>, 2024 <br>
-  <b>Presidential Science Scholarship</b>, 2024 <br>
-  <b>National Excellence Scholarship (Natural Sciences and Engineering)</b>, 2021-2022 <br> 
-  <b>Merit-based Scholarship</b>, 2019-2020 
-  </p> 
-</div>
-
-{% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
+<!-- ========== STRUCTURED DATA ========== -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -108,8 +187,17 @@ title: Home
       "@id": "{{ '/' | absolute_url }}#hyosoon-jang",
       "name": "Hyosoon Jang",
       "alternateName": "장효순",
-      "url": "{{ '/' | absolute_url }}"
-    }{% for paper in selected_papers %},
+      "url": "{{ '/' | absolute_url }}",
+      "email": "mailto:{{ info.email }}",
+      "jobTitle": {{ info.title | jsonify }},
+      "image": {{ info.profile_pic | absolute_url | jsonify }},
+      "affiliation": { "@type": "Organization", "name": "KAIST" },
+      "sameAs": [
+        {{ info.google_scholar | jsonify }},
+        {{ info.github | jsonify }},
+        {{ info.linkedin | jsonify }}
+      ]
+    }{% for paper in papers %},
     {
       "@type": "ScholarlyArticle",
       "headline": {{ paper.title | strip_html | jsonify }},
@@ -117,15 +205,13 @@ title: Home
       "author": [
         {% assign author_list = paper.authors | strip_html | split: "," %}
         {% for author in author_list %}
-        {
-          "@type": "Person",
-          "name": {{ author | strip | jsonify }}
-        }{% unless forloop.last %},{% endunless %}
+        { "@type": "Person", "name": {{ author | strip | jsonify }} }{% unless forloop.last %},{% endunless %}
         {% endfor %}
       ],
+      "datePublished": {{ paper.year | jsonify }},
       "description": {{ paper.venue | strip_html | jsonify }}{% if paper.image %},
-      "image": {{ paper.image | absolute_url | jsonify }}{% endif %}{% if paper.paper_pdf %},
-      "url": {{ paper.paper_pdf | absolute_url | jsonify }}{% endif %}
+      "image": {{ paper.image | absolute_url | jsonify }}{% endif %}{% if paper.links and paper.links.size > 0 %},
+      "url": {% assign first_link = paper.links | first %}{% if first_link.url contains '://' %}{{ first_link.url | jsonify }}{% else %}{{ first_link.url | absolute_url | jsonify }}{% endif %}{% endif %}
     }{% endfor %}
   ]
 }

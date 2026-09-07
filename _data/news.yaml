@@ -1,0 +1,17 @@
+# Most recent first. `date` is free text — keep it short.
+# Edit or add entries here; nothing else needs to change.
+items:
+  - date: "May 2026"
+    text: 'Preprint on <a href="https://arxiv.org/abs/2605.22133">atom-level protein representation learning for structure prediction</a> is out, with code and models released as <a href="https://github.com/hsjang0/TriProRep">TriProRep</a>.'
+
+  - date: "Feb 2026"
+    text: 'Preprint on <a href="https://arxiv.org/abs/2602.13249">co-folding model representations for small-molecule learning</a> is out.'
+
+  - date: "Oct 2025"
+    text: 'Joined the Korean AI-specialized foundation model project (특파모) <b>K-Fold</b>, leading protein representation learning for co-folding.'
+
+  - date: "Sep 2025"
+    text: 'Moved to <b>KAIST</b>, Graduate School of AI, continuing the Ph.D. with Sungsoo Ahn.'
+
+  - date: "Aug 2025"
+    text: '<a href="https://aclanthology.org/2025.findings-emnlp.806/">Self-Training LLMs with Confident Reasoning</a> accepted to <b>EMNLP 2025 Findings</b>.'

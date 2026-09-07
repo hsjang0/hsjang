@@ -1,9 +1,13 @@
 name: "Hyosoon Jang"
-title: "Ph.D student"
+name_ko: "장효순"
+title: "Ph.D. Student"
+affiliation: "Graduate School of AI, KAIST"
 email: "hyosoon.jang@kaist.ac.kr"
 profile_pic: "/assets/profile-pics/20250909_230727769.jpg"
-# twitter: "https://twitter.com/msaveski"
-linkedin: "https://www.linkedin.com/in/hyosoon-jang-b07372382"
+
+# Social / academic links. Comment a line out to hide the icon.
+google_scholar: "https://scholar.google.co.kr/citations?user=NOJd3GEAAAAJ&hl=en"
 github: "https://github.com/hsjang0"
-google_scholar: "https://scholar.google.co.kr/citations?user=NOJd3GEAAAAJ&hl=ko"
-# google_analystics_tracking_id: 'UA-46778883-1'
+linkedin: "https://www.linkedin.com/in/hyosoon-jang-b07372382"
+# twitter: ""
+# cv: "/assets/cv/cv.pdf"   # drop your own CV here and uncomment to show a CV button
