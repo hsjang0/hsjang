@@ -195,6 +195,10 @@ p:last-child { margin-bottom: 0; }
 
 .hero-photo {
   width: 148px;
+  /* The img's height attribute lands as a presentational hint; without this
+     the box has two definite sides and aspect-ratio is ignored, so the photo
+     stretches whenever the width is overridden. */
+  height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: var(--radius);
@@ -455,18 +459,34 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   body { font-size: 16px; }
   html { scroll-padding-top: 76px; }
 
+  /* Keep the two-column layout on phones. The hero photo and the paper
+     thumbnails stay the same width with the same gap, so the name and every
+     paper title share one axis here just as they do on desktop. */
   .hero {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding-top: 40px;
+    grid-template-columns: 104px 1fr;
+    gap: 16px;
+    padding-top: 36px;
   }
-  .hero-photo { width: 112px; }
+  .hero-photo { width: 104px; }
+  .hero h1 { font-size: 1.72rem; letter-spacing: -.03em; }
+  .hero-role { font-size: 14px; margin-bottom: 12px; }
+  .hero-links { gap: 6px; }
+  .icon-link { height: 29px; padding: 0 10px; font-size: 12px; gap: 6px; }
+  .icon-link svg { width: 13px; height: 13px; }
 
-  .paper { grid-template-columns: 1fr; gap: 14px; padding-block: 20px; }
-  .paper-thumb { max-width: 260px; }
+  .paper {
+    grid-template-columns: 104px 1fr;
+    gap: 16px;
+    padding-block: 20px;
+  }
+  .paper-thumb { max-width: none; }
+  .paper-title { font-size: 15.5px; }
+  .paper-authors { font-size: 13.5px; }
+  .paper-venue { font-size: 13px; }
+
   .prose { font-size: 16.5px; }
 
-  .section { padding-top: 44px; }
+  .section { padding-top: 40px; }
   .topbar-inner { height: 54px; gap: 12px; }
   .topbar-name { display: none; }
   .nav { margin-left: 0; }
