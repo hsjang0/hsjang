@@ -263,9 +263,10 @@ p:last-child { margin-bottom: 0; }
 /* Running prose is set in the display serif; the publication list below stays
    in the sans, so structured data reads as data. */
 .prose {
-  max-width: 64ch;
+  /* Full container width, so the paragraph's right edge matches the section
+     rule above it and the publication rows below. */
   font-size: 17.5px;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 .prose b, .prose strong { font-weight: 600; }
 

@@ -2,16 +2,27 @@
 #
 # Fields
 #   title            : paper title (the [P#]/[C#]/[J#] tag is added automatically from `tag`)
-#   tag              : short reference key used in the bio text, e.g. P3, C4, J1
+#   tag              : short reference key used in the bio text, e.g. P3, C4, J1;
+#                      omit it to list a paper without a reference number
 #   authors          : HTML allowed; wrap your own name in <b>...</b>
-#   venue            : full venue name shown under the authors
+#   venue            : full venue name shown under the authors; omit to hide the line
 #   venue_short      : compact label shown in the venue badge
-#   year             : publication year (shown in the badge)
+#   year             : publication year (shown in the badge); omit it for work in
+#                      progress so the badge reads just the venue_short label
 #   highlight        : optional emphasis inside the badge, e.g. "Oral, 1.16%"
 #   image            : thumbnail path
 #   links            : list of {label, url}; internal paths are prefixed with baseurl
 #   selected         : "y" to show on the home page
 papers:
+
+  - title: "Synthesizing State-of-the-Art Structure Predictions from Soup of Co-folding Models"
+    authors: "<b>Hyosoon Jang</b>, Taewon Kim, Sungsoo Ahn"
+    venue_short: "On-going"
+    selected: y
+    image: "/assets/publications/soupfold.png"
+    links:
+      - label: "Paper"
+        url: "/assets/publications/soupfold.pdf"
 
   - tag: "P3"
     title: "Atom-level Protein Representation Learning Improves Protein Structure Prediction"

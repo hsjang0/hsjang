@@ -81,7 +81,7 @@ title: Home
 
   <div class="papers">
     {% for paper in papers %}
-    <article class="paper{% unless paper.image %} no-thumb{% endunless %}" id="{{ paper.tag }}">
+    <article class="paper{% unless paper.image %} no-thumb{% endunless %}"{% if paper.tag %} id="{{ paper.tag }}"{% endif %}>
       {% if paper.image %}
       <div class="paper-thumb">
         <img src="{{ paper.image | relative_url }}" alt="{{ paper.title | strip_html | escape }}"
@@ -99,7 +99,7 @@ title: Home
 
         <h3 class="paper-title">{{ paper.title }}</h3>
         <p class="paper-authors">{{ paper.authors }}</p>
-        <p class="paper-venue">{{ paper.venue }}</p>
+        {% if paper.venue %}<p class="paper-venue">{{ paper.venue }}</p>{% endif %}
 
         {% if paper.links %}
         <div class="paper-links">
@@ -148,9 +148,9 @@ title: Home
         {% for author in author_list %}
         { "@type": "Person", "name": {{ author | strip | jsonify }} }{% unless forloop.last %},{% endunless %}
         {% endfor %}
-      ],
-      "datePublished": {{ paper.year | jsonify }},
-      "description": {{ paper.venue | strip_html | jsonify }}{% if paper.image %},
+      ]{% if paper.year %},
+      "datePublished": {{ paper.year | jsonify }}{% endif %}{% if paper.venue %},
+      "description": {{ paper.venue | strip_html | jsonify }}{% endif %}{% if paper.image %},
       "image": {{ paper.image | absolute_url | jsonify }}{% endif %}{% if paper.links and paper.links.size > 0 %},
       "url": {% assign first_link = paper.links | first %}{% if first_link.url contains '://' %}{{ first_link.url | jsonify }}{% else %}{{ first_link.url | absolute_url | jsonify }}{% endif %}{% endif %}
     }{% endfor %}
