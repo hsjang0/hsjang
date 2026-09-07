@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {% assign info = site.data.main_info %}
-  {% assign default_desc = 'Hyosoon Jang (장효순) — Ph.D. student at KAIST. Research on drug discovery, protein and molecular foundation models, GFlowNets, and generative models.' %}
+  {% assign default_desc = 'Hyosoon Jang (장효순). Ph.D. student at KAIST, working on drug discovery, protein and molecular foundation models, GFlowNets, and generative models.' %}
   {% assign desc = page.description | default: default_desc %}
 
   <title>{{ info.name }} | {{ page.title }}</title>
@@ -42,7 +42,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif&display=swap">
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap">
 
   <link rel="stylesheet" href="{{ '/libs/custom/site.css' | relative_url }}?v=20260907">
   <script defer src="{{ '/libs/custom/site.js' | relative_url }}?v=20260907"></script>
@@ -58,10 +58,7 @@
       <a class="topbar-name" href="{{ '/' | relative_url }}">{{ info.name }}</a>
       <nav class="nav" aria-label="Sections">
         <a href="#about">About</a>
-        <a href="#news">News</a>
         <a href="#publications">Publications</a>
-        <a href="#talks">Talks</a>
-        <a href="#awards">Awards</a>
       </nav>
       <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"

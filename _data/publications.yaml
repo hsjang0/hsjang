@@ -53,7 +53,7 @@ papers:
     title: "Self-Training Large Language Models with Confident Reasoning"
     authors: "<b>Hyosoon Jang</b>, Yunhui Jang, Sungjae Lee, Jungseul Ok, Sungsoo Ahn"
     venue: "Findings of Empirical Methods in Natural Language Processing (EMNLP)"
-    venue_short: "EMNLP Findings"
+    venue_short: "EMNLP"
     year: "2025"
     selected: y
     image: "/assets/publications/Confidence_Self_Training_of_LLMs.png"

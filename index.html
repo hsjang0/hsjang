@@ -7,9 +7,9 @@ title: Home
 <!-- ========== HERO ========== -->
 <section class="wrap hero">
   <img class="hero-photo" src="{{ info.profile_pic | relative_url }}"
-       alt="{{ info.name }}" width="148" height="197" fetchpriority="high" decoding="async">
+       alt="{{ info.name }}" width="148" height="148" fetchpriority="high" decoding="async">
   <div>
-    <h1>{{ info.name }}<span class="name-ko">{{ info.name_ko }}</span></h1>
+    <h1>{{ info.name }}</h1>
     <p class="hero-role">{{ info.title }} &middot; <strong>{{ info.affiliation }}</strong></p>
 
     <div class="hero-links">
@@ -43,14 +43,6 @@ title: Home
         </svg>LinkedIn
       </a>
       {% endif %}
-
-      {% if info.cv %}
-      <a class="icon-link" href="{{ info.cv | relative_url }}" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/>
-        </svg>CV
-      </a>
-      {% endif %}
     </div>
   </div>
 </section>
@@ -65,7 +57,7 @@ title: Home
       at KAIST (2025.09&ndash;; previously at POSTECH, 2023.03&ndash;2025.09).
       My research focuses on <b>drug discovery</b>, with recent work on foundation models for
       protein and molecular learning <a class="ref" href="#P2">P2</a>,&nbsp;<a class="ref" href="#P3">P3</a>, and earlier work on
-      generative modeling &mdash; large language models <a class="ref" href="#P1">P1</a>,&nbsp;<a class="ref" href="#C4">C4</a>,
+      generative modeling, including large language models <a class="ref" href="#P1">P1</a>,&nbsp;<a class="ref" href="#C4">C4</a>,
       generative flow networks <a class="ref" href="#C2">C2</a>,&nbsp;<a class="ref" href="#C3">C3</a>,
       diffusion probabilistic models <a class="ref" href="#C1">C1</a>, and
       variational autoencoders <a class="ref" href="#J2">J2</a>.
@@ -80,21 +72,6 @@ title: Home
     </p>
   </div>
 </section>
-
-<!-- ========== NEWS ========== -->
-{% if site.data.news.items and site.data.news.items.size > 0 %}
-<section class="wrap section" id="news">
-  <h2 class="section-title">News</h2>
-  <div class="news">
-    {% for item in site.data.news.items %}
-    <div class="news-item">
-      <div class="news-date">{{ item.date }}</div>
-      <div class="news-text">{{ item.text }}</div>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
 
 <!-- ========== PUBLICATIONS ========== -->
 {% assign papers = site.data.publications.papers | where: "selected", "y" %}
@@ -141,42 +118,6 @@ title: Home
   </div>
 </section>
 
-<!-- ========== TALKS ========== -->
-{% if site.data.talks.items and site.data.talks.items.size > 0 %}
-<section class="wrap section" id="talks">
-  <h2 class="section-title">Invited Talks</h2>
-  <div class="entries">
-    {% for talk in site.data.talks.items %}
-    <div class="entry">
-      <div class="entry-main">
-        <div class="entry-title">{{ talk.venue }}{% if talk.host %} &middot; <span style="font-weight:400">{{ talk.host }}</span>{% endif %}</div>
-        <div class="entry-sub">{{ talk.title }}</div>
-      </div>
-      <div class="entry-date">{{ talk.date }}</div>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
-
-<!-- ========== AWARDS ========== -->
-{% if site.data.awards.items and site.data.awards.items.size > 0 %}
-<section class="wrap section" id="awards">
-  <h2 class="section-title">Honors &amp; Awards</h2>
-  <div class="entries">
-    {% for award in site.data.awards.items %}
-    <div class="entry">
-      <div class="entry-main">
-        <div class="entry-title">{{ award.title }}</div>
-        {% if award.sub %}<div class="entry-sub">{{ award.sub }}</div>{% endif %}
-      </div>
-      <div class="entry-date">{{ award.date }}</div>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
-
 <!-- ========== STRUCTURED DATA ========== -->
 <script type="application/ld+json">
 {
@@ -186,7 +127,7 @@ title: Home
       "@type": "Person",
       "@id": "{{ '/' | absolute_url }}#hyosoon-jang",
       "name": "Hyosoon Jang",
-      "alternateName": "장효순",
+      "alternateName": {{ info.name_ko | jsonify }},
       "url": "{{ '/' | absolute_url }}",
       "email": "mailto:{{ info.email }}",
       "jobTitle": {{ info.title | jsonify }},

@@ -1,6 +1,6 @@
 # hsjang0.github.io/hsjang
 
-Personal academic homepage of **Hyosoon Jang (장효순)** — Ph.D. student, Graduate School of AI, KAIST.
+Personal academic homepage of **Hyosoon Jang (장효순)**, Ph.D. student, Graduate School of AI, KAIST.
 
 Live at **<https://hsjang0.github.io/hsjang/>**.
 
@@ -11,10 +11,7 @@ Almost every change is a one-file edit under `_data/`. Nothing else needs to cha
 | To change | Edit |
 | --- | --- |
 | Papers (title, authors, venue, links, thumbnail) | `_data/publications.yaml` |
-| News items on the front page | `_data/news.yaml` |
-| Invited talks | `_data/talks.yaml` |
-| Honors and awards | `_data/awards.yaml` |
-| Name, affiliation, email, social links, CV | `_data/main_info.yaml` |
+| Name, affiliation, email, social links | `_data/main_info.yaml` |
 | The About paragraphs | `index.html` |
 
 ### Adding a paper
@@ -38,8 +35,8 @@ Add an entry at the top of `papers:` in `_data/publications.yaml`:
         url: "https://github.com/hsjang0/repo"  # or absolute URLs
 ```
 
-Each paper gets an anchor from its `tag`, so `#C5` links straight to it —
-that is how the `[C5]` chips in the About section work.
+Each paper gets an anchor from its `tag`, so `#C5` links straight to it.
+That is how the `[C5]` chips in the About section work.
 
 Put PDFs and thumbnails in `assets/publications/`. Thumbnails are cropped to
 16:10, so a wide figure works best.
@@ -64,10 +61,10 @@ bundle exec jekyll serve   # or: jekyll serve
 ## Structure
 
 ```
-index.html            single page: hero, about, news, publications, talks, awards
+index.html            single page: hero, about, publications
 _layouts/default.html <head>, top bar, footer, SEO + Open Graph meta
 _data/                all content (see the table above)
-libs/custom/site.css  the whole stylesheet — design tokens at the top
+libs/custom/site.css  the whole stylesheet, design tokens at the top
 libs/custom/site.js   theme toggle, sticky top bar, scroll spy
 assets/               profile photos, paper PDFs and thumbnails
 robots.txt, image-sitemap.xml, google*.html   SEO / Search Console

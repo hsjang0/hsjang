@@ -1,5 +1,5 @@
 name: "Hyosoon Jang"
-name_ko: "장효순"
+name_ko: "장효순"   # not shown on the page; used only in search metadata
 title: "Ph.D. Student"
 affiliation: "Graduate School of AI, KAIST"
 email: "hyosoon.jang@kaist.ac.kr"
@@ -10,4 +10,3 @@ google_scholar: "https://scholar.google.co.kr/citations?user=NOJd3GEAAAAJ&hl=en"
 github: "https://github.com/hsjang0"
 linkedin: "https://www.linkedin.com/in/hyosoon-jang-b07372382"
 # twitter: ""
-# cv: "/assets/cv/cv.pdf"   # drop your own CV here and uncomment to show a CV button

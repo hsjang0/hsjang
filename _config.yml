@@ -1,10 +1,10 @@
 # GitHub Pages builds this site with actions/jekyll-build-pages, which injects the
-# correct `baseurl` (/hsjang) at build time. Do not set `baseurl` here — it would
+# correct `baseurl` (/hsjang) at build time. Do not set `baseurl` here; it would
 # override that and break every asset path.
 
 title: Hyosoon Jang
 description: >-
-  Hyosoon Jang (장효순) — Ph.D. student at KAIST. Research on drug discovery,
+  Hyosoon Jang (장효순). Ph.D. student at KAIST, working on drug discovery,
   protein and molecular foundation models, GFlowNets, and generative models.
 url: "https://hsjang0.github.io"
 lang: en

@@ -1,5 +1,5 @@
 /* ============================================================================
-   Hyosoon Jang — personal site
+   Hyosoon Jang, personal site
    A single stylesheet. No CSS framework; tokens first, then components.
    ========================================================================= */
 
@@ -25,9 +25,8 @@
   --shadow-lg: 0 8px 28px -12px rgba(20, 20, 30, .22);
 
   --measure: 760px;
-  --font-sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                "Helvetica Neue", Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font: "Source Serif 4", Georgia, "Times New Roman",
+          "Apple SD Gothic Neo", "Noto Serif KR", serif;
 }
 
 :root[data-theme="dark"] {
@@ -67,10 +66,9 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-sans);
-  font-size: 16.5px;
+  font-family: var(--font);
+  font-size: 17px;
   line-height: 1.68;
-  font-feature-settings: "cv05" 1, "ss01" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -197,7 +195,7 @@ p:last-child { margin-bottom: 0; }
 
 .hero-photo {
   width: 148px;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: var(--radius);
   border: 1px solid var(--border);
@@ -205,21 +203,10 @@ p:last-child { margin-bottom: 0; }
 }
 
 .hero h1 {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  font-size: clamp(2.3rem, 6vw, 3.15rem);
+  font-weight: 600;
+  font-size: clamp(2.25rem, 5.8vw, 3.05rem);
   letter-spacing: -.015em;
   margin-bottom: 6px;
-}
-.hero h1 .name-ko {
-  font-family: var(--font-sans);
-  font-size: .34em;
-  font-weight: 500;
-  color: var(--text-faint);
-  letter-spacing: 0;
-  margin-left: .45em;
-  vertical-align: .28em;
-  white-space: nowrap;
 }
 
 .hero-role {
@@ -273,11 +260,17 @@ p:last-child { margin-bottom: 0; }
   border-bottom: 1px solid var(--border);
 }
 
-.prose { max-width: 68ch; }
+/* Running prose is set in the display serif; the publication list below stays
+   in the sans, so structured data reads as data. */
+.prose {
+  max-width: 64ch;
+  font-size: 17.5px;
+  line-height: 1.7;
+}
 .prose b, .prose strong { font-weight: 600; }
 
 .ref {
-  font-size: .78em;
+  font-size: .8em;
   font-weight: 600;
   color: var(--accent-text);
   background: var(--accent-soft);
@@ -314,23 +307,19 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
 .news-text { font-size: 15.5px; line-height: 1.6; }
 
 /* ---------- Publications ------------------------------------------------- */
-.papers { display: grid; gap: 14px; }
+.papers { display: grid; }
 
+/* No card chrome: the thumbnail column matches the hero photo (148px + 32px
+   gap) so every left edge on the page lines up, and paper titles sit on the
+   same axis as the name in the hero. */
 .paper {
   display: grid;
-  grid-template-columns: 168px 1fr;
-  gap: 20px;
-  padding: 16px;
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+  grid-template-columns: 148px 1fr;
+  gap: 32px;
+  padding-block: 24px;
+  border-top: 1px solid var(--border);
 }
-.paper:hover {
-  border-color: var(--border-strong);
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-1px);
-}
+.paper:first-child { border-top: 0; padding-top: 4px; }
 .paper.no-thumb { grid-template-columns: 1fr; }
 
 .paper-thumb {
@@ -339,7 +328,9 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   border-radius: var(--radius-sm);
   background: var(--bg-subtle);
   overflow: hidden;
+  transition: border-color .18s ease;
 }
+.paper:hover .paper-thumb { border-color: var(--border-strong); }
 .paper-thumb img { width: 100%; height: 100%; object-fit: cover; }
 
 .paper-body { min-width: 0; }
@@ -468,15 +459,10 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
     padding-top: 40px;
   }
   .hero-photo { width: 112px; }
-  .hero h1 .name-ko { display: inline-block; margin-left: .35em; vertical-align: baseline; font-size: .4em; }
 
-  .paper { grid-template-columns: 1fr; gap: 14px; }
+  .paper { grid-template-columns: 1fr; gap: 14px; padding-block: 20px; }
   .paper-thumb { max-width: 260px; }
-
-  .news-item { grid-template-columns: 1fr; gap: 2px; }
-  .news-date { padding-top: 0; font-size: 12.5px; }
-
-  .entry { grid-template-columns: 1fr; gap: 2px; }
+  .prose { font-size: 16.5px; }
 
   .section { padding-top: 44px; }
   .topbar-inner { height: 54px; gap: 12px; }
