@@ -44,8 +44,11 @@
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&display=swap">
 
-  <link rel="stylesheet" href="{{ '/libs/custom/site.css' | relative_url }}?v=20260907">
-  <script defer src="{{ '/libs/custom/site.js' | relative_url }}?v=20260907"></script>
+  <!-- Cache-bust on the build stamp. A hand-written version string goes stale
+       the moment you forget to bump it, and then edits sit behind the CDN. -->
+  {% assign build = site.time | date: '%Y%m%d%H%M%S' %}
+  <link rel="stylesheet" href="{{ '/libs/custom/site.css' | relative_url }}?v={{ build }}">
+  <script defer src="{{ '/libs/custom/site.js' | relative_url }}?v={{ build }}"></script>
 
   <link rel="icon" type="image/png" href="{{ '/libs/icon.png' | relative_url }}">
 </head>
