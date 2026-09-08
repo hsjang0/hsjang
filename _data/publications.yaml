@@ -5,7 +5,8 @@
 #   tag              : short reference key used in the bio text, e.g. P3, C4, J1;
 #                      omit it to list a paper without a reference number
 #   authors          : HTML allowed; wrap your own name in <span class='me'>...</span>
-#   venue            : full venue name shown under the authors; omit to hide the line
+#   venue            : optional long-form venue line under the authors. Left unset
+#                      everywhere now, since the badge already names the venue
 #   venue_short      : compact label shown in the venue badge
 #   year             : publication year (shown in the badge); omit it for work in
 #                      progress so the badge reads just the venue_short label
@@ -27,7 +28,6 @@ papers:
   - tag: "P3"
     title: "Atom-level Protein Representation Learning Improves Protein Structure Prediction"
     authors: "<span class='me'>Hyosoon Jang</span><sup>&Dagger;</sup>, Taewon Kim<sup>&Dagger;</sup>, Hyunjin Seo, Seonghwan Seo, Hyeongwoo Kim, Wonho Zhung, Mingyeong Shin, Wooyoun Kim, Sungsoo Ahn"
-    venue: "Preprint &middot; arXiv:2605.22133"
     venue_short: "arXiv"
     year: "2026"
     selected: y
@@ -47,7 +47,6 @@ papers:
   - tag: "P2"
     title: "A Systematic Evaluation of Co-folding Model Representations for Small-Molecule Learning"
     authors: "<span class='me'>Hyosoon Jang</span>, Hyunjin Seo, Honghui Kim, Seonghyun Park, Taewon Kim, Yunhui Jang, Sungsoo Ahn"
-    venue: "Preprint &middot; arXiv:2602.13249"
     venue_short: "arXiv"
     year: "2026"
     selected: y
@@ -63,7 +62,6 @@ papers:
   - tag: "C4"
     title: "Self-Training Large Language Models with Confident Reasoning"
     authors: "<span class='me'>Hyosoon Jang</span>, Yunhui Jang, Sungjae Lee, Jungseul Ok, Sungsoo Ahn"
-    venue: "Findings of Empirical Methods in Natural Language Processing (EMNLP)"
     venue_short: "EMNLP"
     year: "2025"
     selected: y
@@ -79,7 +77,6 @@ papers:
   - tag: "P1"
     title: "Can LLMs Generate Diverse Molecules? Towards Alignment with Structural Diversity"
     authors: "<span class='me'>Hyosoon Jang</span>, Yunhui Jang, Jaehyung Kim, Sungsoo Ahn"
-    venue: "Preprint &middot; arXiv:2410.03138"
     venue_short: "arXiv"
     year: "2025"
     selected: y
@@ -93,7 +90,6 @@ papers:
   - tag: "C3"
     title: "Pessimistic Backward Policy for GFlowNets"
     authors: "<span class='me'>Hyosoon Jang</span>, Yunhui Jang, Minsu Kim, Jinkyoo Park, Sungsoo Ahn"
-    venue: "Neural Information Processing Systems (NeurIPS)"
     venue_short: "NeurIPS"
     year: "2024"
     selected: y
@@ -107,7 +103,6 @@ papers:
   - tag: "C2"
     title: "Learning Energy Decomposition for Partial Inference in GFlowNets"
     authors: "<span class='me'>Hyosoon Jang</span>, Minsu Kim, Sungsoo Ahn"
-    venue: "International Conference on Learning Representations (ICLR)"
     venue_short: "ICLR"
     year: "2024"
     highlight: "Oral, 85/7262 = 1.16%"
@@ -122,7 +117,6 @@ papers:
   - tag: "C1"
     title: "Diffusion Probabilistic Models for Structured Node Classification"
     authors: "<span class='me'>Hyosoon Jang</span>, Seonghyun Park, Sangwoo Mo, Sungsoo Ahn"
-    venue: "Neural Information Processing Systems (NeurIPS)"
     venue_short: "NeurIPS"
     year: "2023"
     selected: y
@@ -136,7 +130,6 @@ papers:
   - tag: "J2"
     title: "De novo Drug Design through Gradient-based Regularized Search in Information-theoretically Controlled Latent Space"
     authors: "<span class='me'>Hyosoon Jang</span>, Sangmin Seo, Sanghyun Park, Byung Ju Kim, Geon-Woo Choi, Jonghwan Choi, Chihyun Park"
-    venue: "Journal of Computer-Aided Molecular Design, 38(1)"
     venue_short: "JCAMD"
     year: "2024"
     selected: y
@@ -148,7 +141,6 @@ papers:
   - tag: "J1"
     title: "Machine Learning Algorithms Using Systemic Inflammatory Markers for Predicting the Oncological Outcomes of Colorectal Cancer after Surgery"
     authors: "Songsoo Yang<sup>&Dagger;</sup>, <span class='me'>Hyosoon Jang</span><sup>&Dagger;</sup>, Inkyu Park<sup>&Dagger;</sup>, Sunhye Lee, Gaeul Oh, Chihyun Park*, Jeonghyun Kang*"
-    venue: "Annals of Surgical Oncology, 30(13)"
     venue_short: "Ann. Surg. Oncol."
     year: "2023"
     selected: y
