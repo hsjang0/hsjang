@@ -140,7 +140,7 @@ papers:
 
   - tag: "J1"
     title: "Machine Learning Algorithms Using Systemic Inflammatory Markers for Predicting the Oncological Outcomes of Colorectal Cancer after Surgery"
-    authors: "Songsoo Yang<sup>&Dagger;</sup>, <span class='me'>Hyosoon Jang</span><sup>&Dagger;</sup>, Inkyu Park<sup>&Dagger;</sup>, Sunhye Lee, Gaeul Oh, Chihyun Park*, Jeonghyun Kang*"
+    authors: "Songsoo Yang<sup>&Dagger;</sup>, <span class='me'>Hyosoon Jang</span><sup>&Dagger;</sup>, Inkyu Park<sup>&Dagger;</sup>, Sunhye Lee, Gaeul Oh, Chihyun Park, Jeonghyun Kang"
     venue_short: "Ann. Surg. Oncol."
     year: "2023"
     selected: y
