@@ -25,10 +25,10 @@ papers:
       - label: "Paper"
         url: "/assets/publications/soupfold.pdf"
 
-  - tag: "P3"
+  - tag: "C6"
     title: "Atom-level Protein Representation Learning Improves Protein Structure Prediction"
     authors: "<span class='me'>Hyosoon Jang</span><sup>&Dagger;</sup>, Taewon Kim<sup>&Dagger;</sup>, Hyunjin Seo, Seonghwan Seo, Hyeongwoo Kim, Wonho Zhung, Mingyeong Shin, Wooyoun Kim, Sungsoo Ahn"
-    venue_short: "arXiv"
+    venue_short: "NeurIPS"
     year: "2026"
     selected: y
     image: "/assets/publications/kfold_struct_rep.png"
@@ -44,10 +44,10 @@ papers:
       - label: "Models"
         url: "https://huggingface.co/k-fold-structure"
 
-  - tag: "P2"
+  - tag: "C5"
     title: "A Systematic Evaluation of Co-folding Model Representations for Small-Molecule Learning"
     authors: "<span class='me'>Hyosoon Jang</span>, Hyunjin Seo, Honghui Kim, Seonghyun Park, Taewon Kim, Yunhui Jang, Sungsoo Ahn"
-    venue_short: "arXiv"
+    venue_short: "NeurIPS"
     year: "2026"
     selected: y
     image: "/assets/publications/Boltz_as_FM.png"
