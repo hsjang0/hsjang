@@ -19,6 +19,13 @@
   --accent-soft:   #eaf0fd;
   --accent-text:   #234ba8;
 
+  /* Venue badges, keyed off the reference tag: conferences read as a paler
+     sky blue than the accent an oral carries, journals as a soft green. */
+  --badge-conf-bg:      #e6f1fb;
+  --badge-conf-text:    #2b6491;
+  --badge-journal-bg:   #eaf4e2;
+  --badge-journal-text: #476f31;
+
   --radius:    10px;
   --radius-sm: 6px;
   --shadow:    0 1px 2px rgba(20, 20, 30, .05);
@@ -43,6 +50,11 @@
   --accent:        #8caeff;
   --accent-soft:   #1a2138;
   --accent-text:   #a8c2ff;
+
+  --badge-conf-bg:      #16242f;
+  --badge-conf-text:    #93c4e4;
+  --badge-journal-bg:   #1a2617;
+  --badge-journal-text: #a3c891;
 
   --shadow:    0 1px 2px rgba(0, 0, 0, .4);
   --shadow-lg: 0 8px 28px -12px rgba(0, 0, 0, .7);
@@ -366,6 +378,16 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   background: var(--accent-soft);
   border-color: transparent;
   color: var(--accent-text);
+}
+.badge.is-conference {
+  background: var(--badge-conf-bg);
+  border-color: transparent;
+  color: var(--badge-conf-text);
+}
+.badge.is-journal {
+  background: var(--badge-journal-bg);
+  border-color: transparent;
+  color: var(--badge-journal-text);
 }
 .badge-tag {
   font-variant-numeric: tabular-nums;

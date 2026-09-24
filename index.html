@@ -92,7 +92,12 @@ title: Home
       <div class="paper-body">
         <div class="paper-meta">
           {% if paper.tag %}<span class="badge-tag">{{ paper.tag }}</span>{% endif %}
-          <span class="badge{% if paper.highlight %} is-highlight{% endif %}">
+          {%- comment -%}
+            The tag's first letter is the publication kind: C conference,
+            J journal, P preprint. An oral keeps the stronger accent.
+          {%- endcomment -%}
+          {% assign kind = paper.tag | slice: 0, 1 %}
+          <span class="badge{% if paper.highlight %} is-highlight{% elsif kind == 'C' %} is-conference{% elsif kind == 'J' %} is-journal{% endif %}">
             {{ paper.venue_short }}{% if paper.year %} {{ paper.year }}{% endif %}{% if paper.highlight %} &middot; {{ paper.highlight }}{% endif %}
           </span>
         </div>
