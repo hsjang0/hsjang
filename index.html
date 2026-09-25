@@ -105,6 +105,7 @@ title: Home
         <h3 class="paper-title">{{ paper.title }}</h3>
         <p class="paper-authors">{{ paper.authors }}</p>
         {% if paper.venue %}<p class="paper-venue">{{ paper.venue }}</p>{% endif %}
+        {% if paper.note %}<p class="paper-note">{{ paper.note }}</p>{% endif %}
 
         {% if paper.links %}
         <div class="paper-links">

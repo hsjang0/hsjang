@@ -408,6 +408,7 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
 /* The author's own name is set apart by colour alone, not weight. */
 .paper-authors .me { color: var(--text); }
 .paper-venue { font-size: 14px; color: var(--text-faint); margin-bottom: 11px; }
+.paper-note { font-size: 13.5px; color: var(--text-faint); margin-bottom: 11px; }
 
 .paper-links { display: flex; flex-wrap: wrap; gap: 6px; }
 

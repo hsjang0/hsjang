@@ -11,6 +11,8 @@
 #   year             : publication year (shown in the badge); omit it for work in
 #                      progress so the badge reads just the venue_short label
 #   highlight        : optional emphasis inside the badge, e.g. "Oral, 1.16%"
+#   note             : optional small line under the authors, for things that
+#                      apply to one paper only
 #   image            : thumbnail path
 #   links            : list of {label, url}; internal paths are prefixed with baseurl
 #   selected         : "y" to show on the home page
@@ -28,6 +30,7 @@ papers:
   - tag: "C6"
     title: "Atom-level Protein Representation Learning Improves Protein Structure Prediction"
     authors: "<span class='me'>Hyosoon Jang</span><sup>&Dagger;</sup>, Taewon Kim<sup>&Dagger;</sup>, Hyunjin Seo, Seonghwan Seo, Hyeongwoo Kim, Wonho Zhung, Mingyeong Shin, Wooyoun Kim, Sungsoo Ahn"
+    note: "Order of the equal contributors was determined randomly."
     venue_short: "NeurIPS"
     year: "2026"
     selected: y
