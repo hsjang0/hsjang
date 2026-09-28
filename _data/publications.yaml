@@ -139,7 +139,7 @@ papers:
   - tag: "J2"
     title: "De novo Drug Design through Gradient-based Regularized Search in Information-theoretically Controlled Latent Space"
     authors: "<span class='me'>Hyosoon Jang</span>, Sangmin Seo, Sanghyun Park, Byung Ju Kim, Geon-Woo Choi, Jonghwan Choi, Chihyun Park"
-    venue_short: "JCAMD"
+    venue_short: "J. Comput. Aided Mol. Des."
     year: "2024"
     selected: y
     image: "/assets/publications/jcamd.png"

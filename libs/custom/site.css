@@ -505,6 +505,8 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   .paper-thumb { max-width: none; }
   .paper-title { font-size: 15.5px; }
   .paper-authors { font-size: 13.5px; }
+  /* At 375px the text column is 207px; the ICLR oral badge measured 213px. */
+  .badge, .badge-tag { font-size: 10.5px; }
   .paper-venue { font-size: 13px; }
 
   .prose { font-size: 16.5px; }
