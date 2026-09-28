@@ -18,9 +18,10 @@
 #   selected         : "y" to show on the home page
 papers:
 
-  - title: "Synthesizing State-of-the-Art Structure Predictions from Soup of Co-folding Models"
+  - title: "Co-folding with a Soup of Representations"
     authors: "<span class='me'>Hyosoon Jang</span>, Taewon Kim, Sungsoo Ahn"
-    venue_short: "On-going"
+    venue_short: "arXiv"
+    year: "2026"
     selected: y
     image: "/assets/publications/soupfold.png"
     links:
