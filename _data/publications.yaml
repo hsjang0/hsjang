@@ -18,7 +18,8 @@
 #   selected         : "y" to show on the home page
 papers:
 
-  - title: "Co-folding with a Soup of Representations"
+  - tag: "P2"
+    title: "Co-folding with a Soup of Representations"
     authors: "<span class='me'>Hyosoon Jang</span>, Taewon Kim, Sungsoo Ahn"
     venue_short: "arXiv"
     year: "2026"
@@ -27,6 +28,10 @@ papers:
     links:
       - label: "Paper"
         url: "/assets/publications/soupfold.pdf"
+      - label: "arXiv"
+        url: "https://arxiv.org/abs/2609.15552"
+      - label: "Code"
+        url: "https://github.com/hsjang0/soupfold"
 
   - tag: "C6"
     title: "Atom-level Protein Representation Learning Improves Protein Structure Prediction"
