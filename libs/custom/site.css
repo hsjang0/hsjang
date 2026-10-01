@@ -27,8 +27,8 @@
   --badge-conf-text:     #135d9e;
   --badge-workshop-bg:   #e9f4fc;
   --badge-workshop-text: #3473a6;
-  --badge-journal-bg:   #eaf4e2;
-  --badge-journal-text: #476f31;
+  --badge-journal-bg:   #ddf0d0;
+  --badge-journal-text: #3b6b22;
 
   --radius:    10px;
   --radius-sm: 6px;
@@ -61,8 +61,8 @@
   --badge-conf-text:     #8fd0f8;
   --badge-workshop-bg:   #172530;
   --badge-workshop-text: #94c3e2;
-  --badge-journal-bg:   #1a2617;
-  --badge-journal-text: #a3c891;
+  --badge-journal-bg:   #1b3117;
+  --badge-journal-text: #a8d68f;
 
   --shadow:    0 1px 2px rgba(0, 0, 0, .4);
   --shadow-lg: 0 8px 28px -12px rgba(0, 0, 0, .7);
