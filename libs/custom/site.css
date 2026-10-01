@@ -19,10 +19,14 @@
   --accent-soft:   #eaf0fd;
   --accent-text:   #234ba8;
 
-  /* Venue badges, keyed off the reference tag: conferences read as a paler
-     sky blue than the accent an oral carries, journals as a soft green. */
-  --badge-conf-bg:      #e6f1fb;
-  --badge-conf-text:    #2b6491;
+  /* Venue badges. The blues step down from an oral, to a conference, to a
+     workshop; journals take a soft green. */
+  --badge-oral-bg:       #cfdcfa;
+  --badge-oral-text:     #1d41a0;
+  --badge-conf-bg:       #d5e9fb;
+  --badge-conf-text:     #135d9e;
+  --badge-workshop-bg:   #e9f4fc;
+  --badge-workshop-text: #3473a6;
   --badge-journal-bg:   #eaf4e2;
   --badge-journal-text: #476f31;
 
@@ -51,8 +55,12 @@
   --accent-soft:   #1a2138;
   --accent-text:   #a8c2ff;
 
-  --badge-conf-bg:      #16242f;
-  --badge-conf-text:    #93c4e4;
+  --badge-oral-bg:       #1f2e5c;
+  --badge-oral-text:     #b5caff;
+  --badge-conf-bg:       #12324d;
+  --badge-conf-text:     #8fd0f8;
+  --badge-workshop-bg:   #172530;
+  --badge-workshop-text: #94c3e2;
   --badge-journal-bg:   #1a2617;
   --badge-journal-text: #a3c891;
 
@@ -375,9 +383,14 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   white-space: nowrap;
 }
 .badge.is-highlight {
-  background: var(--accent-soft);
+  background: var(--badge-oral-bg);
   border-color: transparent;
-  color: var(--accent-text);
+  color: var(--badge-oral-text);
+}
+.badge.is-workshop {
+  background: var(--badge-workshop-bg);
+  border-color: transparent;
+  color: var(--badge-workshop-text);
 }
 .badge.is-conference {
   background: var(--badge-conf-bg);
