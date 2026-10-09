@@ -548,12 +548,17 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
 }
 .stage.is-planned .stage-name { color: var(--text-faint); font-weight: 500; }
 
+/* Every status label gets the pill's box, so SOTA's fill does not shift the
+   lists below it out of line with the other columns. */
 .stage-status {
-  margin-top: 8px;
-  text-align: center;
-  font-size: 10px;
+  width: fit-content;
+  margin: 9px auto 0;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 10.5px;
+  line-height: 1.4;
   font-weight: 700;
-  letter-spacing: .09em;
+  letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--text-faint);
 }
@@ -563,16 +568,7 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
 .stage.is-sota .stage-tile {
   box-shadow: 0 8px 18px -8px color-mix(in srgb, var(--stage) 70%, transparent);
 }
-.stage.is-sota .stage-status {
-  width: fit-content;
-  margin: 9px auto 0;
-  padding: 3px 9px 3px 8px;
-  border-radius: 999px;
-  background: var(--stage);
-  color: #fff;
-  font-size: 10.5px;
-  letter-spacing: .08em;
-}
+.stage.is-sota .stage-status { background: var(--stage); color: #fff; }
 .stage.is-sota .stage-status::before { content: "\2605"; margin-right: 4px; }
 .stage.is-sota .stage-name { color: var(--stage); }
 .stage.is-explore .stage-status { color: color-mix(in srgb, var(--stage) 75%, var(--bg)); }
