@@ -7,6 +7,8 @@
 # name     : `|` marks the line break, so every label sits on two lines
 # sota_paper: for a sota stage, the tag of the paper that holds it; the
 #            SOTA pill links there
+# sota_figure, sota_caption: optional; when set, the pill opens the figure in
+#            a popup (with a link to the paper) instead of jumping to it
 # color    : the stage's hue, kept at the muted saturation of the site's
 #            badge colours so the two read as one palette (ignored for planned stages)
 # papers   : chips under the tile; `tag` links to that paper's entry in
@@ -25,6 +27,8 @@ stages:
     color: "#c64b4b"
     status: sota
     sota_paper: "P2"
+    sota_figure: "/assets/research/soupfold_results.png"
+    sota_caption: "Structure prediction success rates. SoupFold improves every base co-folding model on FoldBench and leads on GPCR and molecular glue complexes."
     papers:
       - { label: "K-Fold", note: "coming soon" }
       - { tag: "P2", label: "Soup of representations" }

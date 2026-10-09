@@ -79,7 +79,23 @@
     sections.forEach(function (el) { observer.observe(el); });
   }
 
-  function init() { initTheme(); initTopbar(); initScrollSpy(); }
+  /* --- figure popups -------------------------------------------------- */
+  function initDialogs() {
+    document.addEventListener('click', function (e) {
+      var opener = e.target.closest('[data-open]');
+      if (opener) {
+        var d = document.getElementById(opener.getAttribute('data-open'));
+        if (d && d.showModal) { d.showModal(); }
+        return;
+      }
+      var dialog = e.target.closest('dialog');
+      if (e.target.closest('[data-close]') && dialog) { dialog.close(); return; }
+      // a click on the backdrop lands on the dialog element itself
+      if (e.target.tagName === 'DIALOG') { e.target.close(); }
+    });
+  }
+
+  function init() { initTheme(); initTopbar(); initScrollSpy(); initDialogs(); }
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);

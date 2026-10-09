@@ -594,8 +594,40 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   box-shadow: 0 8px 18px -8px color-mix(in srgb, var(--stage) 70%, transparent);
 }
 .stage.is-sota .stage-status { display: block; background: var(--stage); color: #fff; }
-a.stage-status { transition: filter .15s ease; }
+a.stage-status,
+button.stage-status { transition: filter .15s ease; }
 a.stage-status:hover { text-decoration: none; filter: brightness(1.12); }
+button.stage-status { border: 0; font-family: inherit; cursor: pointer; }
+button.stage-status:hover { filter: brightness(1.12); }
+
+/* The figure behind a SOTA claim, opened from its pill. */
+.sota-dialog {
+  width: min(620px, calc(100vw - 32px));
+  max-height: calc(100vh - 48px);
+  padding: 28px 22px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  color: var(--text);
+  box-shadow: var(--shadow-lg);
+}
+.sota-dialog::backdrop { background: rgba(20, 20, 30, .45); }
+.sota-dialog img { width: 100%; height: auto; border-radius: var(--radius-sm); background: #fff; }
+.sota-caption { margin: 14px 0 14px; font-size: 14px; line-height: 1.55; color: var(--text-muted); }
+.sota-close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  background: transparent;
+  color: var(--text-faint);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+.sota-close:hover { color: var(--text); }
 .stage.is-sota .stage-status::before { content: "\2605"; margin-right: 4px; }
 .stage.is-sota .stage-name { color: var(--stage); }
 .stage.is-explore .stage-status { color: color-mix(in srgb, var(--stage) 75%, var(--bg)); }
