@@ -58,17 +58,17 @@ title: Home
       (DDE) that anyone can access and use. As cutting-edge models in drug discovery
       are increasingly kept proprietary or released under restrictive licenses, the
       gap between industry and open research keeps widening, and I want to help close
-      it. My work spans six stages: target discovery, structure prediction, binding
-      affinity, design and optimization, ADME and toxicity, and the virtual cell.
+      it. My work spans five stages: target discovery, structure prediction, binding
+      affinity, design and optimization, and ADME and toxicity.
     </p>
   </div>
 
   {% assign rs = site.data.research %}
   {% if rs.stages %}
-  <div class="dde" aria-hidden="true">
+  <div class="dde" aria-hidden="true" style="--n: {{ rs.stages | size }}">
     <div class="dde-label">Drug Design Engine (DDE)</div>
   </div>
-  <ol class="pipeline">
+  <ol class="pipeline" style="--n: {{ rs.stages | size }}">
     {% for st in rs.stages %}
     <li class="stage is-{{ st.status }}"{% if st.color and st.status != 'planned' %} style="--stage: {{ st.color }}"{% endif %}>
       <div class="stage-name">{{ st.name | replace: '&', '&amp;' | replace: '|', '<br>' }}</div>

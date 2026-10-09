@@ -44,6 +44,3 @@ stages:
     status: sota
     papers:
       - { tag: "C5", label: "Generalizable representations" }
-
-  - name: "Virtual|Cell"
-    status: planned

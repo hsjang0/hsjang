@@ -479,11 +479,11 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
 .dde,
 .pipeline { --tile: 82px; --gap: 14px; }
 
-/* A rule over all six stages names them as one engine, set in the same
+/* A rule over all the stages names them as one engine, set in the same
    voice as the section titles: small caps, wide tracking, hairline rule. */
 .dde {
   position: relative;
-  width: calc(6 * var(--tile) + 5 * var(--gap));
+  width: calc(var(--n, 6) * var(--tile) + (var(--n, 6) - 1) * var(--gap));
   height: 0;
   margin: 42px auto 20px;
   border-top: 1px solid var(--border-strong);
@@ -508,7 +508,7 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(6, var(--tile));
+  grid-template-columns: repeat(var(--n, 6), var(--tile));
   justify-content: center;
   column-gap: var(--gap);
   row-gap: 28px;
