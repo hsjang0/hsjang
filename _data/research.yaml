@@ -50,5 +50,7 @@ stages:
     color: "#2f877e"
     status: sota
     sota_paper: "C5"
+    sota_figure: "/assets/research/admet_results.png"
+    sota_caption: "Win, draw and loss rates of co-folding model representations against five molecular representation baselines, across absorption, distribution, metabolism, excretion and toxicity tasks."
     papers:
       - { tag: "C5", label: "Generalizable representations" }

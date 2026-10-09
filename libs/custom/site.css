@@ -602,7 +602,7 @@ button.stage-status:hover { filter: brightness(1.12); }
 
 /* The figure behind a SOTA claim, opened from its pill. */
 .sota-dialog {
-  width: min(620px, calc(100vw - 32px));
+  width: min(820px, calc(100vw - 32px));
   max-height: calc(100vh - 48px);
   padding: 28px 22px 20px;
   border: 1px solid var(--border);
@@ -612,7 +612,8 @@ button.stage-status:hover { filter: brightness(1.12); }
   box-shadow: var(--shadow-lg);
 }
 .sota-dialog::backdrop { background: rgba(20, 20, 30, .45); }
-.sota-dialog img { width: 100%; height: auto; border-radius: var(--radius-sm); background: #fff; }
+/* Wide and tall figures both fit: width caps at the dialog, height at 62vh. */
+.sota-dialog img { display: block; width: auto; max-width: 100%; height: auto; max-height: 62vh; margin: 0 auto; border-radius: var(--radius-sm); background: #fff; }
 .sota-caption { margin: 14px 0 14px; font-size: 14px; line-height: 1.55; color: var(--text-muted); }
 .sota-close {
   position: absolute;
