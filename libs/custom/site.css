@@ -502,7 +502,6 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   text-transform: uppercase;
   color: var(--text-faint);
 }
-.dde-mark { margin-right: 8px; color: var(--text); }
 
 .pipeline {
   list-style: none;
