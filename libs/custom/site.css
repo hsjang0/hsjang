@@ -477,7 +477,7 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
 /* Status is carried by how a tile is filled, not by how strong its tint is:
    solid (SOTA), tinted (active), outline (exploring), dashed grey (planned). */
 .dde,
-.pipeline { --tile: 82px; --gap: 14px; }
+.pipeline { --tile: 82px; --gap: 34px; }
 
 /* A rule over all the stages names them as one engine, set in the same
    voice as the section titles: small caps, wide tracking, hairline rule. */
