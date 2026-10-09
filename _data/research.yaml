@@ -1,0 +1,48 @@
+# Drug design pipeline shown in the Research section of the home page.
+#
+# status   : sota     darkest tile, with a SOTA flag
+#            active   mid tint
+#            explore  light tint
+#            planned  grey, no work yet
+# name     : `|` marks the line break, so every label sits on two lines
+# color    : the stage's hue (ignored for planned stages)
+# papers   : chips under the tile; `tag` links to that paper's entry in
+#            Publications. Leave `tag` out for work that is not public yet.
+#            List the most recent work first.
+updated: "Oct 9, 2026"
+stages:
+  - name: "Target|Discovery"
+    color: "#d98a2b"
+    status: explore
+    papers:
+      - { tag: "C4", label: "Confident reasoning" }
+      - { tag: "C1", label: "Diffusion for PPI graphs" }
+
+  - name: "Structure|Prediction"
+    color: "#e03838"
+    status: sota
+    papers:
+      - { label: "K-Fold", note: "coming soon" }
+      - { tag: "P2", label: "Soup of representations" }
+      - { tag: "C6", label: "Pre-training representations" }
+
+  - name: "Binding|Affinity"
+    status: planned
+
+  - name: "Design &|Optimization"
+    color: "#7a5fe0"
+    status: active
+    papers:
+      - { tag: "P1", label: "Diversified generation" }
+      - { tag: "C3", label: "Pessimistic discovery" }
+      - { tag: "C2", label: "Credit assignments" }
+      - { tag: "J2", label: "Exploration in latent space" }
+
+  - name: "ADME &|Toxicity"
+    color: "#2e9488"
+    status: sota
+    papers:
+      - { tag: "C5", label: "Generalizable representations" }
+
+  - name: "Virtual|Cell"
+    status: planned

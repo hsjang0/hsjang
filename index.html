@@ -57,7 +57,40 @@ title: Home
       at KAIST. My research focuses on drug discovery, with recent work on foundation models
       for protein and molecular learning.
     </p>
+    <p>
+      My goal is to build an in-house drug design engine at lab scale, covering
+      the pipeline from target discovery to the virtual cell.
+    </p>
   </div>
+
+  {% assign rs = site.data.research %}
+  {% if rs.stages %}
+  <ol class="pipeline">
+    {% for st in rs.stages %}
+    <li class="stage is-{{ st.status }}"{% if st.color and st.status != 'planned' %} style="--stage: {{ st.color }}"{% endif %}>
+      <div class="stage-name">{{ st.name | replace: '&', '&amp;' | replace: '|', '<br>' }}</div>
+      <div class="stage-tile">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <g stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+          <path d="M50 12 L83 31 L83 69 L50 88 L17 69 L17 31 Z"/>
+          <path d="M50 50 L50 12 M50 50 L83 31 M50 50 L83 69 M50 50 L50 88 M50 50 L17 69 M50 50 L17 31"/>
+          </g>
+          <g fill="currentColor"><circle cx="50" cy="12" r="6.5"/><circle cx="83" cy="31" r="6.5"/><circle cx="83" cy="69" r="6.5"/><circle cx="50" cy="88" r="6.5"/><circle cx="17" cy="69" r="6.5"/><circle cx="17" cy="31" r="6.5"/><circle cx="50" cy="50" r="7"/></g>
+          </svg>
+      </div>
+      <div class="stage-status">{% case st.status %}{% when 'sota' %}SOTA{% when 'active' %}Active{% when 'explore' %}Exploring{% else %}Planned{% endcase %}</div>
+      {% if st.papers %}
+      <ul class="stage-papers">
+        {% for p in st.papers %}
+        <li>{% if p.tag %}<a href="#{{ p.tag }}"><span class="stage-tag">{{ p.tag }}</span><span class="stage-title">{{ p.label }}</span></a>{% else %}<span class="stage-soon"><span class="stage-tag">Soon</span><span class="stage-title">{{ p.label }}</span></span>{% endif %}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+  <p class="pipeline-note">SOTA as of {{ rs.updated }}</p>
+  {% endif %}
 </section>
 
 <!-- ========== PUBLICATIONS ========== -->
