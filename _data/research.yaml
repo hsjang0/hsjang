@@ -5,21 +5,22 @@
 #            explore  light tint
 #            planned  grey, no work yet
 # name     : `|` marks the line break, so every label sits on two lines
-# color    : the stage's hue (ignored for planned stages)
+# color    : the stage's hue, kept at the muted saturation of the site's
+#            badge colours so the two read as one palette (ignored for planned stages)
 # papers   : chips under the tile; `tag` links to that paper's entry in
 #            Publications. Leave `tag` out for work that is not public yet.
 #            List the most recent work first.
 updated: "Oct 9, 2026"
 stages:
   - name: "Target|Discovery"
-    color: "#d98a2b"
+    color: "#c58a45"
     status: explore
     papers:
       - { tag: "C4", label: "Confident reasoning" }
       - { tag: "C1", label: "Diffusion for PPI graphs" }
 
   - name: "Structure|Prediction"
-    color: "#e03838"
+    color: "#c64b4b"
     status: sota
     papers:
       - { label: "K-Fold", note: "coming soon" }
@@ -30,7 +31,7 @@ stages:
     status: planned
 
   - name: "Design &|Optimization"
-    color: "#7a5fe0"
+    color: "#6a5cc4"
     status: active
     papers:
       - { tag: "P1", label: "Diversified generation" }
@@ -39,7 +40,7 @@ stages:
       - { tag: "J2", label: "Exploration in latent space" }
 
   - name: "ADME &|Toxicity"
-    color: "#2e9488"
+    color: "#2f877e"
     status: sota
     papers:
       - { tag: "C5", label: "Generalizable representations" }
