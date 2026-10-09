@@ -58,7 +58,7 @@ title: Home
       for protein and molecular learning.
     </p>
     <p>
-      My goal is to build an in-house drug design engine at lab scale, covering
+      My goal is to build an in-house drug design engine (DDE) at lab scale, covering
       target discovery, structure prediction, binding affinity, design and
       optimization, ADME and toxicity, and the virtual cell.
     </p>
@@ -66,6 +66,9 @@ title: Home
 
   {% assign rs = site.data.research %}
   {% if rs.stages %}
+  <div class="dde" aria-hidden="true">
+    <div class="dde-label"><span class="dde-mark">DDE</span>Drug Design Engine</div>
+  </div>
   <ol class="pipeline">
     {% for st in rs.stages %}
     <li class="stage is-{{ st.status }}"{% if st.color and st.status != 'planned' %} style="--stage: {{ st.color }}"{% endif %}>

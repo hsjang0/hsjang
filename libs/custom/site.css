@@ -476,11 +476,46 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
 /* ---------- Research pipeline ------------------------------------------- */
 /* Status is carried by how a tile is filled, not by how strong its tint is:
    solid (SOTA), tinted (active), outline (exploring), dashed grey (planned). */
+.dde,
+.pipeline { --tile: 94px; --gap: 14px; }
+
+/* A bracket over all six stages names them as one engine. */
+.dde {
+  position: relative;
+  width: calc(6 * var(--tile) + 5 * var(--gap));
+  height: 14px;
+  margin: 44px auto 6px;
+  border: 1.5px solid var(--text-faint);
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+}
+.dde-label {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  padding: 0 14px;
+  background: var(--bg);
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .01em;
+  color: var(--text);
+}
+.dde-mark {
+  margin-right: 9px;
+  padding: 3px 8px 3px 10px;
+  border-radius: 6px;
+  background: var(--text);
+  color: var(--bg);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .16em;
+}
+
 .pipeline {
-  --tile: 94px;
-  --gap: 14px;
   list-style: none;
-  margin: 30px 0 0;
+  margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(6, var(--tile));
@@ -665,6 +700,7 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
 
   .section { padding-top: 40px; }
   .pipeline { grid-template-columns: repeat(3, var(--tile)); }
+  .dde { width: calc(3 * var(--tile) + 2 * var(--gap)); }
   .stage:nth-child(3n) .stage-tile::after { display: none; }
   .topbar-inner { height: 54px; gap: 12px; }
   .topbar-name { display: none; }
