@@ -557,8 +557,24 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   text-transform: uppercase;
   color: var(--text-faint);
 }
-.stage.is-sota .stage-status,
 .stage.is-active .stage-status { color: var(--stage); }
+
+/* SOTA is the claim worth seeing first: a solid pill and a lifted tile. */
+.stage.is-sota .stage-tile {
+  box-shadow: 0 8px 18px -8px color-mix(in srgb, var(--stage) 70%, transparent);
+}
+.stage.is-sota .stage-status {
+  width: fit-content;
+  margin: 9px auto 0;
+  padding: 3px 9px 3px 8px;
+  border-radius: 999px;
+  background: var(--stage);
+  color: #fff;
+  font-size: 10.5px;
+  letter-spacing: .08em;
+}
+.stage.is-sota .stage-status::before { content: "\2605"; margin-right: 4px; }
+.stage.is-sota .stage-name { color: var(--stage); }
 .stage.is-explore .stage-status { color: color-mix(in srgb, var(--stage) 75%, var(--bg)); }
 
 .stage-papers {
