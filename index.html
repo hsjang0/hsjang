@@ -81,7 +81,7 @@ title: Home
           <g fill="currentColor"><circle cx="50" cy="12" r="6.5"/><circle cx="83" cy="31" r="6.5"/><circle cx="83" cy="69" r="6.5"/><circle cx="50" cy="88" r="6.5"/><circle cx="17" cy="69" r="6.5"/><circle cx="17" cy="31" r="6.5"/><circle cx="50" cy="50" r="7"/></g>
           </svg>
       </div>
-      <div class="stage-status">{% case st.status %}{% when 'sota' %}SOTA{% when 'active' %}Active{% when 'explore' %}Exploring{% else %}Planned{% endcase %}</div>
+      {% if st.status == 'sota' and st.sota_paper %}<a class="stage-status" href="#{{ st.sota_paper }}" title="State of the art: {{ st.sota_paper }}">SOTA</a>{% else %}<div class="stage-status">{% case st.status %}{% when 'sota' %}SOTA{% when 'active' %}Active{% when 'explore' %}Exploring{% else %}Planned{% endcase %}</div>{% endif %}
       {% if st.papers %}
       <ul class="stage-papers">
         {% for p in st.papers %}

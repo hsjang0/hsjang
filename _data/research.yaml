@@ -5,6 +5,8 @@
 #            explore  light tint
 #            planned  grey, no work yet
 # name     : `|` marks the line break, so every label sits on two lines
+# sota_paper: for a sota stage, the tag of the paper that holds it; the
+#            SOTA pill links there
 # color    : the stage's hue, kept at the muted saturation of the site's
 #            badge colours so the two read as one palette (ignored for planned stages)
 # papers   : chips under the tile; `tag` links to that paper's entry in
@@ -22,6 +24,7 @@ stages:
   - name: "Structure|Prediction"
     color: "#c64b4b"
     status: sota
+    sota_paper: "P2"
     papers:
       - { label: "K-Fold", note: "coming soon" }
       - { tag: "P2", label: "Soup of representations" }
@@ -42,5 +45,6 @@ stages:
   - name: "ADME &|Toxicity"
     color: "#2f877e"
     status: sota
+    sota_paper: "C5"
     papers:
       - { tag: "C5", label: "Generalizable representations" }

@@ -593,7 +593,9 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
 .stage.is-sota .stage-tile {
   box-shadow: 0 8px 18px -8px color-mix(in srgb, var(--stage) 70%, transparent);
 }
-.stage.is-sota .stage-status { background: var(--stage); color: #fff; }
+.stage.is-sota .stage-status { display: block; background: var(--stage); color: #fff; }
+a.stage-status { transition: filter .15s ease; }
+a.stage-status:hover { text-decoration: none; filter: brightness(1.12); }
 .stage.is-sota .stage-status::before { content: "\2605"; margin-right: 4px; }
 .stage.is-sota .stage-name { color: var(--stage); }
 .stage.is-explore .stage-status { color: color-mix(in srgb, var(--stage) 75%, var(--bg)); }
