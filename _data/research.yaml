@@ -37,7 +37,7 @@ stages:
       - { tag: "P1", label: "Diversified generation" }
       - { tag: "C3", label: "Pessimistic discovery" }
       - { tag: "C2", label: "Credit assignments" }
-      - { tag: "J2", label: "Exploration in latent space" }
+      - { tag: "J2", label: "Latent space exploration" }
 
   - name: "ADME &|Toxicity"
     color: "#2f877e"
