@@ -13,7 +13,8 @@
 #            badge colours so the two read as one palette (ignored for planned stages)
 # papers   : chips under the tile; `tag` links to that paper's entry in
 #            Publications. Leave `tag` out for work that is not public yet.
-#            List the most recent work first.
+#            List the most recent work first. Year and an Oral mark are read
+#            from Publications; set `year` here only when that entry has none.
 updated: "Oct 9, 2026"
 stages:
   - name: "Target|Discovery"
@@ -31,7 +32,7 @@ stages:
     sota_caption: "Structure prediction success rates. SoupFold improves every base co-folding model on FoldBench and leads on GPCR and molecular glue complexes."
     papers:
       - { label: "K-Fold", note: "coming soon" }
-      - { tag: "P2", label: "Soup of representations" }
+      - { tag: "P2", label: "Soup of representations", year: "2026" }
       - { tag: "C6", label: "Pre-training representations" }
 
   - name: "Binding|Affinity"

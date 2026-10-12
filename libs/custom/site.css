@@ -662,6 +662,15 @@ button.stage-status:hover { filter: brightness(1.12); }
   letter-spacing: .06em;
   color: var(--stage);
 }
+.stage-year { margin-left: 5px; font-weight: 500; letter-spacing: .02em; color: var(--text-faint); }
+.stage-oral {
+  margin-left: 5px;
+  padding: 0 4px;
+  border: 1px solid color-mix(in srgb, var(--stage) 70%, var(--bg));
+  border-radius: 999px;
+  font-size: 9.5px;
+  letter-spacing: .04em;
+}
 .stage-soon .stage-tag,
 .stage-soon .stage-title { color: var(--text-faint); }
 
