@@ -91,7 +91,7 @@ title: Home
       {% if st.papers %}
       <ul class="stage-papers">
         {% for p in st.papers %}
-        <li>{% if p.tag %}{% assign pub = site.data.publications.papers | where: "tag", p.tag | first %}{% assign yr = p.year | default: pub.year %}<a href="#{{ p.tag }}"><span class="stage-tag">{{ p.tag }}{% if yr %}<span class="stage-year">{{ yr }}</span>{% endif %}{% if pub.highlight contains 'Oral' %}<span class="stage-oral">Oral</span>{% endif %}</span><span class="stage-title">{{ p.label }}</span></a>{% else %}<span class="stage-soon"><span class="stage-tag">Soon</span><span class="stage-title">{{ p.label }}</span></span>{% endif %}</li>
+        <li>{% if p.tag %}{% assign pub = site.data.publications.papers | where: "tag", p.tag | first %}{% if p.venue %}{% assign v = p.venue %}{% else %}{% capture v %}{{ pub.venue_short }}{% if pub.year %}&nbsp;{{ pub.year }}{% endif %}{% endcapture %}{% endif %}<a href="#{{ p.tag }}"><span class="stage-tag">{{ v | strip }}{% if pub.highlight contains 'Oral' %}<span class="stage-oral">Oral</span>{% endif %}</span><span class="stage-title">{{ p.label }}</span></a>{% else %}<span class="stage-soon"><span class="stage-tag">Soon</span><span class="stage-title">{{ p.label }}</span></span>{% endif %}</li>
         {% endfor %}
       </ul>
       {% endif %}

@@ -13,8 +13,9 @@
 #            badge colours so the two read as one palette (ignored for planned stages)
 # papers   : chips under the tile; `tag` links to that paper's entry in
 #            Publications. Leave `tag` out for work that is not public yet.
-#            List the most recent work first. Year and an Oral mark are read
-#            from Publications; set `year` here only when that entry has none.
+#            List the most recent work first. The venue line (e.g. NeurIPS
+#            2026) and an Oral mark are read from Publications; set `venue`
+#            here to use a shorter label than the publication badge.
 updated: "Oct 9, 2026"
 stages:
   - name: "Target|Discovery"
@@ -32,7 +33,7 @@ stages:
     sota_caption: "Structure prediction success rates. SoupFold improves every base co-folding model on FoldBench and leads on GPCR and molecular glue complexes."
     papers:
       - { label: "K-Fold", note: "coming soon" }
-      - { tag: "P2", label: "Soup of representations", year: "2026" }
+      - { tag: "P2", label: "Soup of representations", venue: "NeurIPS&nbsp;2026 Workshop" }
       - { tag: "C6", label: "Pre-training representations" }
 
   - name: "Binding|Affinity"
@@ -45,7 +46,7 @@ stages:
       - { tag: "P1", label: "Diversified generation" }
       - { tag: "C3", label: "Pessimistic discovery" }
       - { tag: "C2", label: "Credit assignments" }
-      - { tag: "J2", label: "Latent space exploration" }
+      - { tag: "J2", label: "Latent space exploration", venue: "JCAMD&nbsp;2024" }
 
   - name: "ADME &|Toxicity"
     color: "#2f877e"
