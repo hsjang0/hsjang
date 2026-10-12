@@ -33,7 +33,7 @@ stages:
     sota_caption: "Structure prediction success rates. SoupFold improves every base co-folding model on FoldBench and leads on GPCR and molecular glue complexes."
     papers:
       - { label: "K-Fold", note: "coming soon" }
-      - { tag: "P2", label: "Soup of representations", venue: "NeurIPS&nbsp;2026 Workshop" }
+      - { tag: "P2", label: "Soup of representations", venue: "NeurIPS&nbsp;2026&nbsp;(W)" }
       - { tag: "C6", label: "Pre-training representations" }
 
   - name: "Binding|Affinity"
