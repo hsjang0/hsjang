@@ -43,7 +43,7 @@ stages:
     color: "#6a5cc4"
     status: active
     papers:
-      - { tag: "P1", label: "Diversified generation" }
+      - { tag: "P1", label: "Diversified generation", venue: "Preprint&nbsp;2025" }
       - { tag: "C3", label: "Pessimistic discovery" }
       - { tag: "C2", label: "Credit assignments" }
       - { tag: "J2", label: "Latent space exploration", venue: "JCAMD&nbsp;2024" }
