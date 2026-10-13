@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="833 -26 220 220">
+  <!-- The molecule mark from the SPML logo, cropped square for the tab icon.
+       Bonds are drawn heavier than in the logo so they survive at 16px. -->
+  <defs>
+    <linearGradient id="bondTop" x1="872" y1="72" x2="1010" y2="42" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#19C7D9"/><stop offset="1" stop-color="#4FE27B"/></linearGradient>
+    <linearGradient id="bondLeft" x1="872" y1="72" x2="956" y2="132" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#19C7D9"/><stop offset="1" stop-color="#22C5D5"/></linearGradient>
+    <linearGradient id="bondRight" x1="1010" y1="42" x2="956" y2="132" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4FE27B"/><stop offset="1" stop-color="#24C6D4"/></linearGradient>
+  </defs>
+  <g stroke-width="16" stroke-linecap="round">
+    <line x1="872" y1="72" x2="1010" y2="42" stroke="url(#bondTop)"/>
+    <line x1="872" y1="72" x2="956" y2="132" stroke="url(#bondLeft)"/>
+    <line x1="1010" y1="42" x2="956" y2="132" stroke="url(#bondRight)"/>
+  </g>
+  <circle cx="872" cy="72" r="31" fill="#20C6D8"/>
+  <circle cx="1010" cy="42" r="35" fill="#4FE27B"/>
+  <circle cx="956" cy="132" r="29" fill="#24C5D4"/>
+</svg>
