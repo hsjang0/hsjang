@@ -25,7 +25,7 @@ stages:
       - { tag: "C1", label: "Diffusion for PPI graphs" }
 
   - name: "Structure|Prediction"
-    image: "/assets/research/stages/structure-ribbon.png"
+    image: "/assets/research/stages/structure.png"
     status: sota
     sota_paper: "P2"
     sota_figure: "/assets/research/soupfold_results.png"
