@@ -476,21 +476,21 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
 /* ---------- Research pipeline ------------------------------------------- */
 /* The roadmap follows the supplied five-card research figure. */
 .dde {
-  --dde-surface: #fcfbff;
-  --dde-border: #dcd7ee;
-  --dde-rule: #e6e2f0;
+  --dde-surface: #fbfcfd;
+  --dde-border: #dfe3e8;
+  --dde-rule: #e7eaee;
   --dde-muted: #515c68;
-  --dde-accent: #6747c7;
+  --dde-accent: #4e657f;
   width: 100%;
   min-width: 0;
   margin: 30px 0 0;
 }
 :root[data-theme="dark"] .dde {
-  --dde-surface: #18171f;
-  --dde-border: #494056;
-  --dde-rule: #35303f;
-  --dde-muted: #b8b5c7;
-  --dde-accent: #c3adff;
+  --dde-surface: #17191d;
+  --dde-border: #343941;
+  --dde-rule: #30343a;
+  --dde-muted: #b2bbc7;
+  --dde-accent: #a8bbd2;
 }
 .pipeline {
   display: grid;
@@ -533,8 +533,11 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   height: 100%;
   object-fit: contain;
 }
-.stage.is-explore .stage-art img { filter: saturate(.3); }
-.stage.is-planned .stage-art img { filter: saturate(.12); }
+.stage.is-explore .stage-art img { filter: saturate(.3); opacity: .85; }
+.stage.is-planned .stage-art img { filter: saturate(.12); opacity: .75; }
+:root[data-theme="dark"] .stage-art img { filter: brightness(1.4); }
+:root[data-theme="dark"] .stage.is-explore .stage-art img { filter: saturate(.3) brightness(1.25); }
+:root[data-theme="dark"] .stage.is-planned .stage-art img { filter: saturate(.12) brightness(1.15); }
 .stage-status {
   padding: 4px 0 8px;
   border-bottom: 1px solid var(--dde-rule);
@@ -588,7 +591,7 @@ button.stage-badge:hover, a.stage-badge:hover {
   text-decoration: none;
 }
 .dde :focus-visible { outline-color: var(--dde-accent); }
-.dde ::selection { background: #ddd3fa; color: #231344; }
+.dde ::selection { background: #dce5ee; color: #203449; }
 
 /* The figure behind a SOTA claim, opened from its pill. */
 .sota-dialog {

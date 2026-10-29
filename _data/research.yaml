@@ -18,14 +18,14 @@
 updated: "Oct 9, 2026"
 stages:
   - name: "Target|Discovery"
-    image: "/assets/research/stages/target.png"
+    image: "/assets/research/stages/target-v2.png"
     status: explore
     papers:
       - { tag: "C4", label: "Confident reasoning" }
       - { tag: "C1", label: "Diffusion for PPI graphs" }
 
   - name: "Structure|Prediction"
-    image: "/assets/research/stages/structure.png"
+    image: "/assets/research/stages/structure-v2.png"
     status: sota
     sota_paper: "P2"
     sota_figure: "/assets/research/soupfold_results.png"
@@ -36,11 +36,11 @@ stages:
       - { tag: "C6", label: "Pre-training representations" }
 
   - name: "Binding|Affinity"
-    image: "/assets/research/stages/affinity.png"
+    image: "/assets/research/stages/affinity-v2.png"
     status: planned
 
   - name: "Design &|Optimization"
-    image: "/assets/research/stages/design.png"
+    image: "/assets/research/stages/design-v2.png"
     status: active
     papers:
       - { tag: "P1", label: "Diversified generation", venue: "Preprint&nbsp;2025" }
@@ -49,7 +49,7 @@ stages:
       - { tag: "J2", label: "Latent space exploration", venue: "JCAMD&nbsp;2024" }
 
   - name: "ADME &|Toxicity"
-    image: "/assets/research/stages/admet.png"
+    image: "/assets/research/stages/admet-v2.png"
     status: sota
     sota_paper: "C5"
     sota_figure: "/assets/research/admet_results.png"
