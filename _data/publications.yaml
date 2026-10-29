@@ -24,7 +24,7 @@ papers:
   - tag: "P3"
     title: "Predicting Conformational Changes Induced by Biomolecular Interactions"
     authors: "Team KAIST (33 authors in alphabetical order)"
-    note: "<strong>Hyosoon Jang</strong>: core contributor, leading the protein structure encoder and evaluation &amp; analysis. Part of the K-Fold project."
+    note: "<strong>Hyosoon Jang</strong>: core contributor, leading the protein structure encoder and evaluation &amp; analysis.<br>K-Fold is developed by the KAIST consortium of Korea&#39;s national AI-specialized foundation model project."
     team:
       name: "Team KAIST"
       count: 33
