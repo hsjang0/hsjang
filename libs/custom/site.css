@@ -507,6 +507,12 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   border-radius: 10px;
   background: var(--dde-surface);
 }
+.stage.is-explore,
+.stage.is-planned {
+  --dde-surface: color-mix(in srgb, var(--bg-elevated) 98%, var(--text-muted));
+  --dde-border: color-mix(in srgb, var(--bg) 80%, var(--text-muted));
+  --dde-rule: color-mix(in srgb, var(--bg) 90%, var(--text-muted));
+}
 .stage-name {
   min-height: 2.2em;
   text-align: center;
