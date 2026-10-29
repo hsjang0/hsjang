@@ -13,9 +13,9 @@
 #   highlight        : optional emphasis inside the badge, e.g. "Oral, 1.16%"
 #   note             : optional small line under the authors, for things that
 #                      apply to one paper only
-#   team             : optional {name, count, groups[{role, members}], legend};
-#                      replaces the author line with a team name that opens the
-#                      member list in a popup
+#   team             : optional {before, name, count, after, groups[{role, members}],
+#                      legend}; replaces the author line with a sentence whose
+#                      team name opens the member list in a popup
 #   image            : thumbnail path
 #   links            : list of {label, url}; internal paths are prefixed with baseurl
 #   selected         : "y" to show on the home page
@@ -24,10 +24,12 @@ papers:
   - tag: "P3"
     title: "Predicting Conformational Changes Induced by Biomolecular Interactions"
     authors: "Team KAIST (33 authors in alphabetical order)"
-    note: "<strong>Hyosoon Jang</strong>: core contributor, leading the protein structure encoder and evaluation &amp; analysis.<br>K-Fold is developed by the KAIST consortium of Korea&#39;s national AI-specialized foundation model project."
+    note: "<strong>Hyosoon Jang</strong>: core contributor, leading the protein structure encoder and evaluation &amp; analysis."
     team:
-      name: "Team KAIST"
+      before: "K-Fold is developed by the"
+      name: "KAIST consortium"
       count: 33
+      after: "of Korea&#39;s national AI-specialized foundation model project."
       groups:
         - { role: "Project management", members: "Hyeongwoo Kim<sup>3,†,‡</sup>" }
         - { role: "Engineering lead", members: "Seonghwan Seo<sup>3,†</sup>" }
