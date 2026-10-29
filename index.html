@@ -89,8 +89,12 @@ title: Home
             {% if p.tag %}
             {% assign pub = site.data.publications.papers | where: "tag", p.tag | first %}
             {% if p.venue %}{% assign v = p.venue %}{% else %}{% capture v %}{{ pub.venue_short }}{% if pub.year %}&nbsp;{{ pub.year }}{% endif %}{% endcapture %}{% endif %}
-            <span class="stage-title"><a href="#{{ p.tag }}">{{ p.label }}</a>{% if p.tag == st.sota_paper %} {% if st.sota_figure %}<button class="stage-badge" type="button" data-open="sota-{{ stage_number }}" aria-label="View {{ st.name | replace: '|', ' ' | escape }} SOTA results">SOTA</button>{% else %}<a class="stage-badge" href="#{{ p.tag }}">SOTA</a>{% endif %}{% endif %}</span>
-            <span class="stage-tag">{{ v | strip }}{% if pub.highlight contains 'Oral' %} <span class="stage-badge stage-oral">Oral</span>{% endif %}</span>
+            <span class="stage-title"><a href="#{{ p.tag }}">{{ p.label }}</a></span>
+            {% assign venue_lines = v | strip | split: '<br>' %}
+            <span class="stage-tag">
+              <span class="stage-meta"><span>{{ venue_lines | first }}</span>{% if p.tag == st.sota_paper %}{% if st.sota_figure %}<button class="stage-badge" type="button" data-open="sota-{{ stage_number }}" aria-label="View {{ st.name | replace: '|', ' ' | escape }} SOTA results">SOTA</button>{% else %}<a class="stage-badge" href="#{{ p.tag }}">SOTA</a>{% endif %}{% endif %}{% if pub.highlight contains 'Oral' %}<span class="stage-badge stage-oral">Oral</span>{% endif %}</span>
+              {% for venue_line in venue_lines offset:1 %}<span class="stage-venue-detail">{{ venue_line }}</span>{% endfor %}
+            </span>
             {% else %}<span class="stage-title">{{ p.label }}</span><span class="stage-tag">Ongoing</span>{% endif %}
           </li>
           {% endfor %}

@@ -566,9 +566,17 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
 .stage-title, .stage-title a { color: var(--text); }
 .stage-title a:hover { color: var(--dde-accent); }
 .stage-tag { color: var(--dde-muted); }
+.stage-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 4px;
+}
+.stage-venue-detail { display: block; }
+.stage-meta .stage-badge { flex: none; }
 .stage-badge {
   display: inline-block;
-  padding: 1px 4px;
+  padding: 0 3px;
   border: 1px solid color-mix(in srgb, var(--dde-accent) 40%, var(--dde-surface));
   border-radius: 6px;
   background: transparent;
