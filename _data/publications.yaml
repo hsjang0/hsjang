@@ -18,6 +18,20 @@
 #   selected         : "y" to show on the home page
 papers:
 
+  - tag: "P3"
+    title: "K-Fold: Predicting Conformational Changes Induced by Biomolecular Interactions"
+    authors: "Team KAIST (33 authors in alphabetical order)"
+    note: "Hyosoon Jang: core contributor, leading the protein structure encoder and evaluation &amp; analysis. Part of the K-Fold project."
+    venue_short: "bioRxiv"
+    year: "2026"
+    selected: y
+    image: "/assets/publications/kfold_complex.png"
+    links:
+      - label: "Paper"
+        url: "https://www.biorxiv.org/content/10.64898/2026.10.26.760299v1"
+      - label: "Code"
+        url: "https://github.com/kaist-ai-bio/kfold"
+
   - tag: "P2"
     title: "Co-folding with a Soup of Representations"
     authors: "<span class='me'>Hyosoon Jang</span>, Taewon Kim, Sungsoo Ahn"
@@ -31,19 +45,6 @@ papers:
         url: "https://arxiv.org/abs/2609.15552"
       - label: "Code"
         url: "https://github.com/hsjang0/soupfold"
-
-  - tag: "P3"
-    title: "Predicting Conformational Changes Induced by Biomolecular Interactions"
-    authors: "Team KAIST (33 authors in alphabetical order)"
-    note: "Hyosoon Jang: core contributor, leading the protein structure encoder and evaluation &amp; analysis. Part of the K-Fold project."
-    venue_short: "bioRxiv"
-    year: "2026"
-    selected: y
-    links:
-      - label: "Paper"
-        url: "https://www.biorxiv.org/content/10.64898/2026.10.26.760299v1"
-      - label: "Code"
-        url: "https://github.com/kaist-ai-bio/kfold"
 
   - tag: "C6"
     title: "Atom-level Protein Representation Learning Improves Protein Structure Prediction"
