@@ -11,6 +11,8 @@
 #   year             : publication year (shown in the badge); omit it for work in
 #                      progress so the badge reads just the venue_short label
 #   highlight        : optional emphasis inside the badge, e.g. "Oral, 1.16%"
+#   extra_badges     : optional list of {label, kind}; kind "workshop" or "conference"
+#                      colours it, e.g. a preliminary workshop version
 #   note             : optional small line under the authors, for things that
 #                      apply to one paper only
 #   team             : optional {before, name, count, after, groups[{role, members}],
@@ -55,7 +57,9 @@ papers:
   - tag: "P2"
     title: "Co-folding with a Soup of Representations"
     authors: "<span class='me'>Hyosoon Jang</span>, Taewon Kim, Sungsoo Ahn"
-    venue_short: "NeurIPS 2026 AI4DD Workshop"
+    venue_short: "Under review"
+    extra_badges:
+      - { label: "Preliminary: NeurIPS 2026 W", kind: "workshop" }
     selected: y
     image: "/assets/publications/soupfold.png"
     links:

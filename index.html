@@ -129,6 +129,7 @@ title: Home
           <span class="badge{% if paper.highlight %} is-highlight{% elsif paper.venue_short contains 'Workshop' %} is-workshop{% elsif kind == 'C' %} is-conference{% elsif kind == 'J' %} is-journal{% endif %}">
             {{ paper.venue_short }}{% if paper.year %} {{ paper.year }}{% endif %}{% if paper.highlight %} &middot; {{ paper.highlight }}{% endif %}
           </span>
+          {% for b in paper.extra_badges %}<span class="badge is-{{ b.kind | default: 'plain' }}">{{ b.label }}</span>{% endfor %}
         </div>
 
         <h3 class="paper-title">{{ paper.title }}</h3>
