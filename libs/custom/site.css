@@ -615,6 +615,32 @@ button.stage-status:hover { filter: brightness(1.12); }
 /* Wide and tall figures both fit: width caps at the dialog, height at 62vh. */
 .sota-dialog img { display: block; width: auto; max-width: 100%; height: auto; max-height: 62vh; margin: 0 auto; border-radius: var(--radius-sm); background: #fff; }
 .sota-caption { margin: 14px 0 14px; font-size: 14px; line-height: 1.55; color: var(--text-muted); }
+.paper-authors strong,
+.paper-note strong { font-weight: 600; color: var(--text); }
+
+/* A team byline opens the member list. */
+.team-link {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--text);
+  cursor: pointer;
+  text-decoration: underline dotted;
+  text-decoration-color: var(--text-faint);
+  text-underline-offset: 3px;
+}
+.team-link:hover { color: var(--accent-text); text-decoration-color: currentColor; }
+.team-dialog { width: min(680px, calc(100vw - 32px)); }
+.team-title { margin: 0 0 14px; font-size: 16px; font-weight: 600; }
+.team-title span { font-weight: 400; color: var(--text-faint); font-size: 14px; }
+.team-list { list-style: none; margin: 0 0 14px; padding: 0; display: grid; gap: 8px; }
+.team-list li { font-size: 14px; line-height: 1.55; color: var(--text-muted); }
+.team-list strong { font-weight: 600; color: var(--text); }
+.team-role { font-weight: 600; color: var(--text); }
+.team-list sup, .team-legend sup { font-size: .7em; }
+.team-legend { margin: 0; font-size: 12.5px; line-height: 1.6; color: var(--text-faint); }
+
 .sota-close {
   position: absolute;
   top: 6px;

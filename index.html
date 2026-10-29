@@ -132,7 +132,20 @@ title: Home
         </div>
 
         <h3 class="paper-title">{{ paper.title }}</h3>
+        {% if paper.team %}
+        <p class="paper-authors"><button class="team-link" type="button" data-open="team-{{ paper.tag }}"><strong>{{ paper.team.name }}</strong></button> ({{ paper.team.count }} authors in alphabetical order)</p>
+        <dialog class="sota-dialog team-dialog" id="team-{{ paper.tag }}" aria-label="Members of {{ paper.team.name }}">
+          <button class="sota-close" type="button" data-close aria-label="Close">&times;</button>
+          <h4 class="team-title">Members of {{ paper.team.name }} <span>(alphabetical order)</span></h4>
+          <ul class="team-list">
+            {% for g in paper.team.groups %}<li><span class="team-role">{{ g.role }}:</span> {{ g.members }}</li>
+            {% endfor %}
+          </ul>
+          <p class="team-legend">{{ paper.team.legend }}</p>
+        </dialog>
+        {% else %}
         <p class="paper-authors">{{ paper.authors }}</p>
+        {% endif %}
         {% if paper.venue %}<p class="paper-venue">{{ paper.venue }}</p>{% endif %}
         {% if paper.note %}<p class="paper-note">{{ paper.note }}</p>{% endif %}
 

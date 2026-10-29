@@ -13,15 +13,31 @@
 #   highlight        : optional emphasis inside the badge, e.g. "Oral, 1.16%"
 #   note             : optional small line under the authors, for things that
 #                      apply to one paper only
+#   team             : optional {name, count, groups[{role, members}], legend};
+#                      replaces the author line with a team name that opens the
+#                      member list in a popup
 #   image            : thumbnail path
 #   links            : list of {label, url}; internal paths are prefixed with baseurl
 #   selected         : "y" to show on the home page
 papers:
 
   - tag: "P3"
-    title: "K-Fold: Predicting Conformational Changes Induced by Biomolecular Interactions"
+    title: "Predicting Conformational Changes Induced by Biomolecular Interactions"
     authors: "Team KAIST (33 authors in alphabetical order)"
-    note: "Hyosoon Jang: core contributor, leading the protein structure encoder and evaluation &amp; analysis. Part of the K-Fold project."
+    note: "<strong>Hyosoon Jang</strong>: core contributor, leading the protein structure encoder and evaluation &amp; analysis. Part of the K-Fold project."
+    team:
+      name: "Team KAIST"
+      count: 33
+      groups:
+        - { role: "Project management", members: "Hyeongwoo Kim<sup>3,†,‡</sup>" }
+        - { role: "Engineering lead", members: "Seonghwan Seo<sup>3,†</sup>" }
+        - { role: "K-Fold architecture", members: "Seokhyun Moon<sup>3,†</sup>, Jun Hyeong Kim<sup>3</sup>, Shinwoo Kim<sup>3</sup>, Minha Park<sup>3</sup>, Jisu Seo<sup>3</sup>, Mingyeong Shin<sup>3</sup>, Wonho Zhung<sup>3</sup>" }
+        - { role: "Protein structure encoder", members: "<strong>Hyosoon Jang</strong><sup>1,†</sup>, Taewon Kim<sup>1,†</sup>, Hyunjin Seo<sup>1</sup>" }
+        - { role: "RNA sequence encoder", members: "Dongki Kim<sup>1,†</sup>, Jun Hyeong Kim<sup>1,†</sup>, Jinheon Baek<sup>1</sup>, Jaehyeong Jo<sup>1</sup>" }
+        - { role: "Training data preparation", members: "Yeongnam Bae<sup>2,†</sup>, Woosung Jeon<sup>2,†</sup>, Joongwon Lee<sup>3,†</sup>, Junyup Lee<sup>2,†</sup>, Yunsu Shin<sup>2,†</sup>, Eugene Choi<sup>2</sup>, Jeong Hun Choi<sup>2</sup>, Hyeongyu Han<sup>2</sup>, Calvin Samuel<sup>2</sup>" }
+        - { role: "Kernel optimization", members: "Youngchan Kim<sup>4</sup>" }
+        - { role: "Supervision", members: "Sungsoo Ahn<sup>1</sup>, Dongsu Han<sup>4,1</sup>, Sung Ju Hwang<sup>1</sup>, Ho Min Kim<sup>2</sup>, Woo Youn Kim<sup>3</sup>, Gyu Rie Lee<sup>2</sup>, Byung-Ha Oh<sup>2</sup>" }
+      legend: "† Core contributor; ‡ Corresponding author; <sup>1</sup> KAIST AI; <sup>2</sup> KAIST Biological Sciences; <sup>3</sup> KAIST Chemistry; <sup>4</sup> KAIST Electrical Engineering."
     venue_short: "bioRxiv"
     year: "2026"
     selected: y
