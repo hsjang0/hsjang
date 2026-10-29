@@ -476,21 +476,21 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
 /* ---------- Research pipeline ------------------------------------------- */
 /* The roadmap follows the supplied five-card research figure. */
 .dde {
-  --dde-surface: #fbfcfd;
-  --dde-border: #dfe3e8;
-  --dde-rule: #e7eaee;
+  --dde-surface: #f8faff;
+  --dde-border: #d6e0ee;
+  --dde-rule: #e1e8f4;
   --dde-muted: #515c68;
-  --dde-accent: #4e657f;
+  --dde-accent: #3d62a1;
   width: 100%;
   min-width: 0;
   margin: 30px 0 0;
 }
 :root[data-theme="dark"] .dde {
-  --dde-surface: #17191d;
-  --dde-border: #343941;
-  --dde-rule: #30343a;
+  --dde-surface: #171c27;
+  --dde-border: #34435c;
+  --dde-rule: #2c384d;
   --dde-muted: #b2bbc7;
-  --dde-accent: #a8bbd2;
+  --dde-accent: #a3c1ff;
 }
 .pipeline {
   display: grid;
@@ -513,6 +513,19 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   --dde-border: color-mix(in srgb, var(--bg) 80%, var(--text-muted));
   --dde-rule: color-mix(in srgb, var(--bg) 90%, var(--text-muted));
 }
+.stage.is-active {
+  --art-hue: 30deg;
+  --dde-surface: #faf8ff;
+  --dde-border: #ded6ef;
+  --dde-rule: #e8e2f3;
+  --dde-accent: #7052ae;
+}
+:root[data-theme="dark"] .stage.is-active {
+  --dde-surface: #1e1929;
+  --dde-border: #49385e;
+  --dde-rule: #382c49;
+  --dde-accent: #c6adff;
+}
 .stage-name {
   min-height: 2.2em;
   text-align: center;
@@ -532,12 +545,13 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   width: 100%;
   height: 100%;
   object-fit: contain;
+  filter: saturate(4.5) hue-rotate(var(--art-hue, 0deg));
 }
-.stage.is-explore .stage-art img { filter: saturate(.3); opacity: .85; }
-.stage.is-planned .stage-art img { filter: saturate(.12); opacity: .75; }
-:root[data-theme="dark"] .stage-art img { filter: brightness(1.4); }
-:root[data-theme="dark"] .stage.is-explore .stage-art img { filter: saturate(.3) brightness(1.25); }
-:root[data-theme="dark"] .stage.is-planned .stage-art img { filter: saturate(.12) brightness(1.15); }
+.stage.is-explore .stage-art img { filter: saturate(1.4); opacity: .9; }
+.stage.is-planned .stage-art img { filter: saturate(.5); opacity: .8; }
+:root[data-theme="dark"] .stage-art img { filter: saturate(4.5) hue-rotate(var(--art-hue, 0deg)) brightness(1.3); }
+:root[data-theme="dark"] .stage.is-explore .stage-art img { filter: saturate(1.4) brightness(1.3); }
+:root[data-theme="dark"] .stage.is-planned .stage-art img { filter: saturate(.5) brightness(1.2); }
 .stage-status {
   padding: 4px 0 8px;
   border-bottom: 1px solid var(--dde-rule);
@@ -548,6 +562,8 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   text-transform: uppercase;
   color: var(--dde-muted);
 }
+.stage.is-sota .stage-status,
+.stage.is-active .stage-status { color: var(--dde-accent); }
 .stage-papers {
   display: flex;
   flex-direction: column;
@@ -579,7 +595,7 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   padding: 0 3px;
   border: 1px solid color-mix(in srgb, var(--dde-accent) 40%, var(--dde-surface));
   border-radius: 6px;
-  background: transparent;
+  background: color-mix(in srgb, var(--dde-accent) 8%, var(--dde-surface));
   color: var(--dde-accent);
   font-family: inherit;
   font-size: 9px;
