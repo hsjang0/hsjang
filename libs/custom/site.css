@@ -492,14 +492,6 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   --dde-muted: #b8b5c7;
   --dde-accent: #c3adff;
 }
-.dde-label {
-  margin: 0 0 18px;
-  text-align: center;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0;
-  color: var(--text);
-}
 .pipeline {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -535,6 +527,8 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   height: 100%;
   object-fit: contain;
 }
+.stage.is-explore .stage-art img { filter: saturate(.3); }
+.stage.is-planned .stage-art img { filter: saturate(.12); }
 .stage-status {
   padding: 4px 0 8px;
   border-bottom: 1px solid var(--dde-rule);
@@ -651,6 +645,7 @@ button.stage-badge:hover, a.stage-badge:hover {
   font-size: 12px;
   color: var(--text-muted);
 }
+.pipeline-note span { display: inline-block; }
 
 /* ---------- Footer ------------------------------------------------------- */
 .footer {

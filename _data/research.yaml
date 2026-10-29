@@ -32,8 +32,8 @@ stages:
     sota_caption: "Structure prediction success rates. SoupFold improves every base co-folding model on FoldBench and leads on GPCR and molecular glue complexes."
     papers:
       - { tag: "P3", label: "K-Fold", venue: "Preprint&nbsp;2026" }
-      - { tag: "P2", label: "SoupFold", venue: "NeurIPS&nbsp;2026<br>AI4DD Workshop" }
-      - { tag: "C6", label: "TriProRep" }
+      - { tag: "P2", label: "Soup of representations", venue: "NeurIPS&nbsp;2026<br>AI4DD Workshop" }
+      - { tag: "C6", label: "Pre-training representations" }
 
   - name: "Binding|Affinity"
     image: "/assets/research/stages/affinity.png"
@@ -55,4 +55,4 @@ stages:
     sota_figure: "/assets/research/admet_results.png"
     sota_caption: "Win, draw and loss rates of co-folding model representations against five molecular representation baselines, across absorption, distribution, metabolism, excretion and toxicity tasks."
     papers:
-      - { tag: "C5", label: "Small-molecule learning" }
+      - { tag: "C5", label: "Generalizable representations" }

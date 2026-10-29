@@ -66,11 +66,10 @@ title: Home
   {% assign rs = site.data.research %}
   {% if rs.stages %}
   <div class="dde" role="group" aria-labelledby="dde-heading">
-    <h3 class="dde-label" id="dde-heading">Drug Design Engine (DDE)</h3>
     <ol class="pipeline">
       {% for st in rs.stages %}
       {% assign stage_number = forloop.index %}
-      <li class="stage">
+      <li class="stage is-{{ st.status }}">
         <div class="stage-name">{{ st.name | replace: '&', '&amp;' | replace: '|', '<br>' }}</div>
         <div class="stage-art" aria-hidden="true">
           <img src="{{ st.image | relative_url }}" alt="" width="320" height="180" decoding="async">
@@ -100,7 +99,7 @@ title: Home
       </li>
       {% endfor %}
     </ol>
-    <p class="pipeline-note">SOTA as of {{ rs.updated }}</p>
+    <p class="pipeline-note" id="dde-heading">Drug Design Engine (DDE) <span>(SOTA as of {{ rs.updated }})</span></p>
   </div>
   {% endif %}
 </section>
