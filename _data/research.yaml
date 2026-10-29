@@ -1,17 +1,16 @@
 # Drug design pipeline shown in the Research section of the home page.
 #
-# status   : sota     darkest tile, with a SOTA flag
-#            active   mid tint
-#            explore  light tint
-#            planned  grey, no work yet
+# status   : sota     Active label, with a paper-level SOTA badge
+#            active   Active label
+#            explore  Exploring label
+#            planned  Planned label, no work yet
 # name     : `|` marks the line break, so every label sits on two lines
 # sota_paper: for a sota stage, the tag of the paper that holds it; the
-#            SOTA pill links there
-# sota_figure, sota_caption: optional; when set, the pill opens the figure in
+#            SOTA badge links there
+# sota_figure, sota_caption: optional; when set, the badge opens the figure in
 #            a popup (with a link to the paper) instead of jumping to it
-# color    : the stage's hue, kept at the muted saturation of the site's
-#            badge colours so the two read as one palette (ignored for planned stages)
-# papers   : chips under the tile; `tag` links to that paper's entry in
+# image    : original blue-violet illustration for each stage
+# papers   : entries inside the card; `tag` links to that paper's entry in
 #            Publications. Leave `tag` out for work that is not public yet.
 #            List the most recent work first. The venue line (e.g. NeurIPS
 #            2026) and an Oral mark are read from Publications; set `venue`
@@ -19,28 +18,29 @@
 updated: "Oct 9, 2026"
 stages:
   - name: "Target|Discovery"
-    color: "#c58a45"
+    image: "/assets/research/stages/target.png"
     status: explore
     papers:
       - { tag: "C4", label: "Confident reasoning" }
       - { tag: "C1", label: "Diffusion for PPI graphs" }
 
   - name: "Structure|Prediction"
-    color: "#c64b4b"
+    image: "/assets/research/stages/structure.png"
     status: sota
     sota_paper: "P2"
     sota_figure: "/assets/research/soupfold_results.png"
     sota_caption: "Structure prediction success rates. SoupFold improves every base co-folding model on FoldBench and leads on GPCR and molecular glue complexes."
     papers:
       - { tag: "P3", label: "K-Fold", venue: "Preprint&nbsp;2026" }
-      - { tag: "P2", label: "Soup of representations", venue: "Preprint&nbsp;2026" }
-      - { tag: "C6", label: "Pre-training representations" }
+      - { tag: "P2", label: "SoupFold", venue: "NeurIPS&nbsp;2026<br>AI4DD Workshop" }
+      - { tag: "C6", label: "TriProRep" }
 
   - name: "Binding|Affinity"
+    image: "/assets/research/stages/affinity.png"
     status: planned
 
   - name: "Design &|Optimization"
-    color: "#6a5cc4"
+    image: "/assets/research/stages/design.png"
     status: active
     papers:
       - { tag: "P1", label: "Diversified generation", venue: "Preprint&nbsp;2025" }
@@ -49,10 +49,10 @@ stages:
       - { tag: "J2", label: "Latent space exploration", venue: "JCAMD&nbsp;2024" }
 
   - name: "ADME &|Toxicity"
-    color: "#2f877e"
+    image: "/assets/research/stages/admet.png"
     status: sota
     sota_paper: "C5"
     sota_figure: "/assets/research/admet_results.png"
     sota_caption: "Win, draw and loss rates of co-folding model representations against five molecular representation baselines, across absorption, distribution, metabolism, excretion and toxicity tasks."
     papers:
-      - { tag: "C5", label: "Generalizable representations" }
+      - { tag: "C5", label: "Small-molecule learning" }

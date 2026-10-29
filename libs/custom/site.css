@@ -474,131 +474,121 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
 }
 
 /* ---------- Research pipeline ------------------------------------------- */
-/* Status is carried by how a tile is filled, not by how strong its tint is:
-   solid (SOTA), tinted (active), outline (exploring), dashed grey (planned). */
-.dde,
-.pipeline { --tile: 82px; --gap: 34px; }
-
-/* A rule over all the stages names them as one engine, set in the same
-   voice as the section titles: small caps, wide tracking, hairline rule. */
+/* The roadmap follows the supplied five-card research figure. */
 .dde {
-  position: relative;
-  width: calc(var(--n, 6) * var(--tile) + (var(--n, 6) - 1) * var(--gap));
-  height: 0;
-  margin: 42px auto 20px;
-  border-top: 1px solid var(--border-strong);
+  --dde-surface: #fcfbff;
+  --dde-border: #dcd7ee;
+  --dde-rule: #e6e2f0;
+  --dde-muted: #515c68;
+  --dde-accent: #6747c7;
+  width: min(1040px, calc(100vw - 48px));
+  margin: 36px 0 0 50%;
+  transform: translateX(-50%);
+}
+:root[data-theme="dark"] .dde {
+  --dde-surface: #18171f;
+  --dde-border: #494056;
+  --dde-rule: #35303f;
+  --dde-muted: #b8b5c7;
+  --dde-accent: #c3adff;
 }
 .dde-label {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -55%);
-  padding: 0 12px;
-  background: var(--bg);
-  white-space: nowrap;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: .13em;
-  text-transform: uppercase;
-  color: var(--text-faint);
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--text);
 }
-
 .pipeline {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 9px;
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(var(--n, 6), var(--tile));
-  justify-content: center;
-  column-gap: var(--gap);
-  row-gap: 28px;
 }
-
-.stage { --stage: #9a9aa3; --tile-bg: var(--bg); min-width: 0; }
-
+.stage {
+  min-width: 0;
+  padding: 10px 12px 12px;
+  border: 1px solid var(--dde-border);
+  border-radius: 10px;
+  background: var(--dde-surface);
+}
 .stage-name {
-  min-height: 2.6em;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  margin-bottom: 9px;
+  min-height: 2.2em;
   text-align: center;
-  font-size: 13.5px;
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: -.01em;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -.025em;
   color: var(--text);
 }
-
-.stage-tile {
-  position: relative;
-  width: var(--tile);
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
-  border: 2px solid var(--stage);
-  border-radius: var(--radius);
-  background: var(--tile-bg);
-  color: var(--stage);
+.stage-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 76px;
 }
-.stage-tile svg { width: 66px; height: 66px; overflow: visible; }
-/* Each node sits in a ring of the tile colour, so edges stop short of it. */
-.stage-tile circle { stroke: var(--tile-bg); stroke-width: 3.5px; }
-
-/* The pipeline runs left to right through the tiles. */
-.stage:not(:last-child) .stage-tile::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: calc(100% + 2px);
-  width: var(--gap);
-  border-top: 1.5px solid var(--border-strong);
+.stage-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
-
-.stage.is-sota { --tile-bg: var(--stage); }
-.stage.is-sota .stage-tile { color: #fff; }
-
-.stage.is-active { --tile-bg: color-mix(in srgb, var(--stage) 14%, var(--bg)); }
-
-.stage.is-explore .stage-tile {
-  border-width: 1.5px;
-  border-color: color-mix(in srgb, var(--stage) 60%, var(--bg));
-  color: color-mix(in srgb, var(--stage) 70%, var(--bg));
-}
-.stage.is-explore .stage-name { color: var(--text-muted); }
-
-.stage.is-planned .stage-tile {
-  border: 1.5px dashed var(--border-strong);
-  color: var(--border-strong);
-}
-.stage.is-planned .stage-name { color: var(--text-faint); font-weight: 500; }
-
-/* Every status label gets the pill's box, so SOTA's fill does not shift the
-   lists below it out of line with the other columns. */
 .stage-status {
-  width: fit-content;
-  margin: 9px auto 0;
-  padding: 3px 9px;
-  border-radius: 999px;
-  font-size: 11px;
-  line-height: 1.4;
-  font-weight: 600;
-  letter-spacing: .08em;
+  padding: 4px 0 8px;
+  border-bottom: 1px solid var(--dde-rule);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
   text-transform: uppercase;
-  color: var(--text-faint);
+  color: var(--dde-muted);
 }
-.stage.is-active .stage-status { color: var(--stage); }
-
-/* SOTA is the claim worth seeing first: a solid pill and a lifted tile. */
-.stage.is-sota .stage-tile {
-  box-shadow: 0 8px 18px -8px color-mix(in srgb, var(--stage) 70%, transparent);
+.stage-papers {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  margin: 7px 0 0;
+  padding: 0;
 }
-.stage.is-sota .stage-status { display: block; background: var(--stage); color: #fff; }
-a.stage-status,
-button.stage-status { transition: filter .15s ease; }
-a.stage-status:hover { text-decoration: none; filter: brightness(1.12); }
-button.stage-status { border: 0; font-family: inherit; cursor: pointer; }
-button.stage-status:hover { filter: brightness(1.12); }
+.stage-title, .stage-tag {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -.025em;
+}
+.stage-title, .stage-title a { color: var(--text); }
+.stage-title a:hover { color: var(--dde-accent); }
+.stage-tag { color: var(--dde-muted); }
+.stage-badge {
+  display: inline-block;
+  padding: 1px 4px;
+  border: 1px solid color-mix(in srgb, var(--dde-accent) 40%, var(--dde-surface));
+  border-radius: 6px;
+  background: transparent;
+  color: var(--dde-accent);
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+button.stage-badge { position: relative; cursor: pointer; }
+/* Give the compact badge a comfortable pointer target without moving the text. */
+button.stage-badge::after { content: ""; position: absolute; inset: -6px -2px; }
+button.stage-badge:hover, a.stage-badge:hover {
+  background: color-mix(in srgb, var(--dde-accent) 10%, var(--dde-surface));
+  border-color: var(--dde-accent);
+  text-decoration: none;
+}
+.dde :focus-visible { outline-color: var(--dde-accent); }
+.dde ::selection { background: #ddd3fa; color: #231344; }
 
 /* The figure behind a SOTA claim, opened from its pill. */
 .sota-dialog {
@@ -655,55 +645,11 @@ button.stage-status:hover { filter: brightness(1.12); }
   cursor: pointer;
 }
 .sota-close:hover { color: var(--text); }
-.stage.is-sota .stage-status::before { content: "\2605"; margin-right: 4px; }
-.stage.is-sota .stage-name { color: var(--stage); }
-.stage.is-explore .stage-status { color: color-mix(in srgb, var(--stage) 75%, var(--bg)); }
-
-.stage-papers {
-  list-style: none;
-  margin: 12px 0 0;
-  padding: 0 0 0 8px;
-  border-left: 2px solid color-mix(in srgb, var(--stage) 45%, var(--bg));
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-}
-.stage.is-sota .stage-papers,
-.stage.is-active .stage-papers { border-left-color: var(--stage); }
-
-.stage-papers a,
-.stage-soon {
-  display: block;
-  font-size: 11px;
-  line-height: 1.35;
-  color: var(--text-muted);
-}
-.stage-papers a:hover { text-decoration: none; color: var(--text); }
-.stage-papers a:hover .stage-title { text-decoration: underline; text-underline-offset: 2px; }
-.stage-tag {
-  display: block;
-  margin-bottom: 1px;
-  font-size: 10.5px;
-  font-weight: 600;
-  letter-spacing: .01em;
-  color: var(--stage);
-}
-.stage-oral {
-  margin-left: 5px;
-  padding: 0 4px;
-  border: 1px solid color-mix(in srgb, var(--stage) 70%, var(--bg));
-  border-radius: 999px;
-  font-size: 9.5px;
-  letter-spacing: .04em;
-}
-.stage-soon .stage-tag,
-.stage-soon .stage-title { color: var(--text-faint); }
-
 .pipeline-note {
-  margin: 22px 0 0;
+  margin: 12px 0 0;
   text-align: center;
   font-size: 12px;
-  color: var(--text-faint);
+  color: var(--text-muted);
 }
 
 /* ---------- Footer ------------------------------------------------------- */
@@ -760,12 +706,22 @@ button.stage-status:hover { filter: brightness(1.12); }
   .prose { font-size: 16.5px; }
 
   .section { padding-top: 40px; }
-  .pipeline { grid-template-columns: repeat(3, var(--tile)); }
-  .dde { width: calc(3 * var(--tile) + 2 * var(--gap)); }
-  .stage:nth-child(3n) .stage-tile::after { display: none; }
   .topbar-inner { height: 54px; gap: 12px; }
   .topbar-name { display: none; }
   .nav { margin-left: 0; }
+}
+
+@media (max-width: 900px) {
+  .pipeline { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .pipeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stage { padding-inline: 10px; }
+  .stage-name { font-size: 18px; }
+  .stage-title, .stage-tag { font-size: 14px; }
+}
+@media (max-width: 360px) {
+  .pipeline { grid-template-columns: 1fr; }
 }
 
 @media print {
