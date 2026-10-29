@@ -481,9 +481,9 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   --dde-rule: #e6e2f0;
   --dde-muted: #515c68;
   --dde-accent: #6747c7;
-  width: min(1040px, calc(100vw - 48px));
-  margin: 36px 0 0 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  min-width: 0;
+  margin: 30px 0 0;
 }
 :root[data-theme="dark"] .dde {
   --dde-surface: #18171f;
@@ -495,7 +495,7 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
 .dde-label {
   margin: 0 0 18px;
   text-align: center;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 500;
   letter-spacing: 0;
   color: var(--text);
@@ -503,14 +503,14 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
 .pipeline {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 9px;
+  gap: 7px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .stage {
   min-width: 0;
-  padding: 10px 12px 12px;
+  padding: 9px 8px 10px;
   border: 1px solid var(--dde-border);
   border-radius: 10px;
   background: var(--dde-surface);
@@ -518,7 +518,7 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
 .stage-name {
   min-height: 2.2em;
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: -.025em;
@@ -528,7 +528,7 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 76px;
+  height: 66px;
 }
 .stage-art img {
   width: 100%;
@@ -539,7 +539,7 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   padding: 4px 0 8px;
   border-bottom: 1px solid var(--dde-rule);
   text-align: center;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 400;
   line-height: 1.2;
   text-transform: uppercase;
@@ -548,14 +548,14 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
 .stage-papers {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 7px;
   list-style: none;
   margin: 7px 0 0;
   padding: 0;
 }
 .stage-title, .stage-tag {
   display: block;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -.025em;
@@ -571,7 +571,7 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   background: transparent;
   color: var(--dde-accent);
   font-family: inherit;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0;
@@ -711,14 +711,11 @@ button.stage-badge:hover, a.stage-badge:hover {
   .nav { margin-left: 0; }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 640px) {
   .pipeline { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .pipeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .stage { padding-inline: 10px; }
-  .stage-name { font-size: 18px; }
-  .stage-title, .stage-tag { font-size: 14px; }
 }
 @media (max-width: 360px) {
   .pipeline { grid-template-columns: 1fr; }
