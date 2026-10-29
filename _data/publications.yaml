@@ -45,6 +45,8 @@ papers:
     links:
       - label: "Paper"
         url: "https://www.biorxiv.org/content/10.64898/2026.10.26.760299v1"
+      - label: "PDF"
+        url: "https://www.biorxiv.org/content/10.64898/2026.10.26.760299v1.full.pdf"
       - label: "Code"
         url: "https://github.com/kaist-ai-bio/kfold"
 
