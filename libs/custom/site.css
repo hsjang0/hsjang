@@ -474,14 +474,14 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
 }
 
 /* ---------- Research pipeline ------------------------------------------- */
-/* The roadmap follows the supplied five-card research figure. */
+/* Open columns keep the roadmap part of the page's reading flow. */
 .dde {
   --dde-surface: #f8faff;
   --dde-border: #d6e0ee;
   --dde-rule: #e1e8f4;
   --dde-muted: #515c68;
   --dde-accent: #3d62a1;
-  width: 95%;
+  width: 100%;
   min-width: 0;
   margin: 27px auto 0;
 }
@@ -503,9 +503,8 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
 .stage {
   min-width: 0;
   padding: 8px 7px 9px;
-  border: 1px solid var(--dde-border);
-  border-radius: 9px;
-  background: var(--dde-surface);
+  border: 0;
+  background: transparent;
 }
 .stage.is-explore,
 .stage.is-planned {
