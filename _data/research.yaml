@@ -10,6 +10,7 @@
 # sota_figure, sota_caption: optional; when set, the badge opens the figure in
 #            a popup (with a link to the paper) instead of jumping to it
 # image    : illustration for each stage
+# theme    : optional card palette, e.g. teal
 # papers   : entries inside the card; `tag` links to that paper's entry in
 #            Publications. Leave `tag` out for work that is not public yet.
 #            List the most recent work first. The venue line (e.g. NeurIPS
@@ -49,6 +50,7 @@ stages:
       - { tag: "J2", label: "Latent space exploration", venue: "JCAMD&nbsp;2024" }
 
   - name: "ADME &|Toxicity"
+    theme: teal
     image: "/assets/research/stages/admet-v2.png"
     status: sota
     sota_paper: "C5"

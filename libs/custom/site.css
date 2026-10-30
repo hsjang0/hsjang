@@ -526,6 +526,19 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   --dde-rule: #382c49;
   --dde-accent: #c6adff;
 }
+.stage-theme-teal {
+  --art-hue: -35deg;
+  --dde-surface: #f4fbfa;
+  --dde-border: #cce5df;
+  --dde-rule: #dceee9;
+  --dde-accent: #247f73;
+}
+:root[data-theme="dark"] .stage-theme-teal {
+  --dde-surface: #14231f;
+  --dde-border: #2c5147;
+  --dde-rule: #243f38;
+  --dde-accent: #80d4c1;
+}
 .stage-name {
   min-height: 2.2em;
   text-align: center;

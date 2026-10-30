@@ -69,7 +69,7 @@ title: Home
     <ol class="pipeline">
       {% for st in rs.stages %}
       {% assign stage_number = forloop.index %}
-      <li class="stage is-{{ st.status }}">
+      <li class="stage is-{{ st.status }}{% if st.theme %} stage-theme-{{ st.theme | escape }}{% endif %}">
         <div class="stage-name">{{ st.name | replace: '&', '&amp;' | replace: '|', '<br>' }}</div>
         <div class="stage-art" aria-hidden="true">
           <img src="{{ st.image | relative_url }}" alt="" width="320" height="180" decoding="async">
