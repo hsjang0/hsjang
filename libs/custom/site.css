@@ -481,7 +481,7 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   --dde-rule: #e1e8f4;
   --dde-muted: #515c68;
   --dde-accent: #3d62a1;
-  width: 90%;
+  width: 95%;
   min-width: 0;
   margin: 27px auto 0;
 }
