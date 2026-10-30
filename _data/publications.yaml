@@ -57,7 +57,8 @@ papers:
   - tag: "P2"
     title: "Co-folding with a Soup of Representations"
     authors: "<span class='me'>Hyosoon Jang</span>, Taewon Kim, Sungsoo Ahn"
-    venue_short: "Under review"
+    venue_short: "arXiv"
+    year: "2026"
     extra_badges:
       - { label: "Preliminary: NeurIPS 2026 W", kind: "workshop" }
     selected: y
