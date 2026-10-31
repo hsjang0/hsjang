@@ -151,7 +151,13 @@ title: Home
           <p class="team-legend">{{ paper.team.legend }}</p>
         </dialog>
         {% else %}
-        <p class="paper-authors">{{ paper.authors }}</p>
+        {% assign displayed_authors = paper.authors %}
+        {% if paper.author_role %}
+          {% capture own_author %}<span class='me'>Hyosoon Jang</span>{% if paper.authors contains "Hyosoon Jang</span><sup>&Dagger;</sup>" %}<sup>&Dagger;</sup>{% endif %}{% endcapture %}
+          {% capture labeled_author %}{{ own_author }} ({{ paper.author_role | escape }}){% endcapture %}
+          {% assign displayed_authors = paper.authors | replace: own_author, labeled_author %}
+        {% endif %}
+        <p class="paper-authors">{{ displayed_authors }}</p>
         {% endif %}
         {% if paper.venue %}<p class="paper-venue">{{ paper.venue }}</p>{% endif %}
         {% if paper.note %}<p class="paper-note">{{ paper.note }}</p>{% endif %}
