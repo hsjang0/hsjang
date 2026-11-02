@@ -19,11 +19,11 @@
   --accent-soft:   #eaf0fd;
   --accent-text:   #234ba8;
 
-  /* Blue venues, gold presentation honors, terracotta compute scale. */
+  /* Blue venues, gold presentation honors, neutral gray compute scale. */
   --badge-oral-bg:       #fff0d2;
   --badge-oral-text:     #87580f;
-  --badge-compute-bg:    #f6e8e1;
-  --badge-compute-text:  #8c4934;
+  --badge-compute-bg:    #e2e3e5;
+  --badge-compute-text:  #44464b;
   --badge-conf-bg:       #d5e9fb;
   --badge-conf-text:     #135d9e;
   --badge-workshop-bg:   #e9f4fc;
@@ -58,8 +58,8 @@
 
   --badge-oral-bg:       #3d2c12;
   --badge-oral-text:     #f3cf87;
-  --badge-compute-bg:    #3b2923;
-  --badge-compute-text:  #e9b49c;
+  --badge-compute-bg:    #34363b;
+  --badge-compute-text:  #d7d9dd;
   --badge-conf-bg:       #12324d;
   --badge-conf-text:     #8fd0f8;
   --badge-workshop-bg:   #172530;
