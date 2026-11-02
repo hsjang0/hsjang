@@ -29,10 +29,9 @@ papers:
     authors: "Team KAIST (33 authors in alphabetical order)"
     note: "<strong>Hyosoon Jang</strong>: core contributor, leading the protein structure encoder and contributing evaluation &amp; analysis."
     team:
-      before: "K-Fold: Developed by the"
       name: "KAIST consortium"
       count: 33
-      after: "of Korea&#39;s national AI-specialized foundation model project."
+      after: "of Korea&#39;s national AI-specialized foundation model project"
       groups:
         - { role: "Project management", members: "Hyeongwoo Kim<sup>3,†,‡</sup>" }
         - { role: "Engineering lead", members: "Seonghwan Seo<sup>3,†</sup>" }

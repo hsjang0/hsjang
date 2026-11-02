@@ -663,10 +663,12 @@ button.stage-badge:hover, a.stage-badge:hover {
 
 /* A team byline opens the member list. */
 .team-link {
+  max-width: 100%;
   padding: 0;
   border: 0;
   background: none;
   font: inherit;
+  text-align: start;
   color: var(--text);
   cursor: pointer;
   text-decoration: underline dotted;

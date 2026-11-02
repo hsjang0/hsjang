@@ -141,7 +141,7 @@ title: Home
 
         <h3 class="paper-title">{{ paper.title }}</h3>
         {% if paper.team %}
-        <p class="paper-authors">{{ paper.team.before }} <button class="team-link" type="button" data-open="team-{{ paper.tag }}"><strong>{{ paper.team.name }} ({{ paper.team.count }} authors)</strong></button> {{ paper.team.after }}</p>
+        <p class="paper-authors">{{ paper.team.before }} <button class="team-link" type="button" data-open="team-{{ paper.tag }}"><strong>{{ paper.team.name }}</strong> (Click to view {{ paper.team.count }} authors and contributions)</button> {{ paper.team.after }}</p>
         <dialog class="sota-dialog team-dialog" id="team-{{ paper.tag }}" aria-label="Members of {{ paper.team.name }}">
           <button class="sota-close" type="button" data-close aria-label="Close">&times;</button>
           <h4 class="team-title">Members of the {{ paper.team.name }} <span>(alphabetical order)</span></h4>
