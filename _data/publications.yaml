@@ -11,7 +11,7 @@
 #   venue_short      : compact label shown in the venue badge
 #   year             : publication year (shown in the badge); omit it for work in
 #                      progress so the badge reads just the venue_short label
-#   highlight        : optional emphasis inside the badge, e.g. "Oral, 1.16%"
+#   highlight        : optional separate presentation badge, e.g. "Oral, 1.16%"
 #   extra_badges     : optional list of {label, kind}; kind "workshop" or "conference"
 #                      colours it, e.g. a preliminary workshop version
 #   note             : optional small line under the authors, for things that
@@ -45,6 +45,8 @@ papers:
       legend: "† Core contributor; ‡ Corresponding author; <sup>1</sup> KAIST AI; <sup>2</sup> KAIST Biological Sciences; <sup>3</sup> KAIST Chemistry; <sup>4</sup> KAIST Electrical Engineering."
     venue_short: "bioRxiv"
     year: "2026"
+    extra_badges:
+      - { label: "256 × B200 GPUs", kind: "compute" }
     selected: y
     image: "/assets/publications/kfold_complex.png"
     links:
@@ -80,6 +82,8 @@ papers:
     note: "Order of the equal contributors was determined randomly."
     venue_short: "NeurIPS"
     year: "2026"
+    extra_badges:
+      - { label: "64 × B200 GPUs", kind: "compute" }
     selected: y
     image: "/assets/publications/kfold_struct_rep.png"
     links:
@@ -160,7 +164,7 @@ papers:
     author_role: "first"
     venue_short: "ICLR"
     year: "2024"
-    highlight: "Oral, 85/7262 = 1.16%"
+    highlight: "Oral · 85/7,262 (1.16%)"
     selected: y
     image: "/assets/publications/LED_GFlowNet-13.png"
     links:

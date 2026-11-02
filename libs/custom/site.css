@@ -19,10 +19,11 @@
   --accent-soft:   #eaf0fd;
   --accent-text:   #234ba8;
 
-  /* Venue badges. The blues step down from an oral, to a conference, to a
-     workshop; journals take a soft green. */
-  --badge-oral-bg:       #cfdcfa;
-  --badge-oral-text:     #1d41a0;
+  /* Blue venues, gold presentation honors, terracotta compute scale. */
+  --badge-oral-bg:       #fff0d2;
+  --badge-oral-text:     #87580f;
+  --badge-compute-bg:    #f6e8e1;
+  --badge-compute-text:  #8c4934;
   --badge-conf-bg:       #d5e9fb;
   --badge-conf-text:     #135d9e;
   --badge-workshop-bg:   #e9f4fc;
@@ -55,8 +56,10 @@
   --accent-soft:   #1a2138;
   --accent-text:   #a8c2ff;
 
-  --badge-oral-bg:       #1f2e5c;
-  --badge-oral-text:     #b5caff;
+  --badge-oral-bg:       #3d2c12;
+  --badge-oral-text:     #f3cf87;
+  --badge-compute-bg:    #3b2923;
+  --badge-compute-text:  #e9b49c;
   --badge-conf-bg:       #12324d;
   --badge-conf-text:     #8fd0f8;
   --badge-workshop-bg:   #172530;
@@ -387,6 +390,12 @@ a.ref:hover { text-decoration: none; filter: brightness(.94); }
   border-color: transparent;
   color: var(--badge-oral-text);
 }
+.badge.is-compute {
+  background: var(--badge-compute-bg);
+  border-color: transparent;
+  color: var(--badge-compute-text);
+  font-variant-numeric: tabular-nums;
+}
 .badge.is-workshop {
   background: var(--badge-workshop-bg);
   border-color: transparent;
@@ -627,6 +636,11 @@ button.stage-badge:hover, a.stage-badge:hover {
   text-decoration: none;
 }
 .dde :focus-visible { outline-color: var(--dde-accent); }
+.stage-badge.stage-oral {
+  background: var(--badge-oral-bg);
+  border-color: transparent;
+  color: var(--badge-oral-text);
+}
 .dde ::selection { background: #dce5ee; color: #203449; }
 
 /* The figure behind a SOTA claim, opened from its pill. */
