@@ -19,10 +19,11 @@ Almost every change is a one-file edit under `_data/`. Nothing else needs to cha
 Add an entry at the top of `papers:` in `_data/publications.yaml`:
 
 ```yaml
-  - tag: "C5"                       # key used by the [C5] references in the bio
+  - tag: "P12"                       # next paper number; all papers use P
     title: "Paper Title"
     authors: "<b>Hyosoon Jang</b>, Co Author"   # bold your own name
     venue: "Conference on Something (ABC)"      # full name, shown under the authors
+    venue_kind: "conference"                   # optional badge palette
     venue_short: "ABC"                          # short name, shown in the badge
     year: "2026"
     highlight: "Oral, 1.2%"         # optional; makes the badge stand out
@@ -35,8 +36,9 @@ Add an entry at the top of `papers:` in `_data/publications.yaml`:
         url: "https://github.com/hsjang0/repo"  # or absolute URLs
 ```
 
-Each paper gets an anchor from its `tag`, so `#C5` links straight to it.
-That is how the `[C5]` chips in the About section work.
+Use one P-number sequence for all papers, regardless of venue.
+Each paper gets an anchor from its `tag`, so `#P12` links straight to it.
+That is how the `[P12]` chips in the About section work.
 
 Put PDFs and thumbnails in `assets/publications/`. Thumbnails are cropped to
 16:10, so a wide figure works best.

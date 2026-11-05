@@ -127,12 +127,7 @@ title: Home
       <div class="paper-body">
         <div class="paper-meta">
           {% if paper.tag %}<span class="badge-tag">{{ paper.tag }}</span>{% endif %}
-          {%- comment -%}
-            The tag's first letter is the publication kind: C conference,
-            J journal, P preprint. Presentation highlights get a separate badge.
-          {%- endcomment -%}
-          {% assign kind = paper.tag | slice: 0, 1 %}
-          <span class="badge{% if paper.venue_short contains 'Workshop' %} is-workshop{% elsif kind == 'C' %} is-conference{% elsif kind == 'J' %} is-journal{% endif %}">
+          <span class="badge{% if paper.venue_short contains 'Workshop' %} is-workshop{% elsif paper.venue_kind %} is-{{ paper.venue_kind | escape }}{% endif %}">
             {{ paper.venue_short }}{% if paper.year %} {{ paper.year }}{% endif %}
           </span>
           {% if paper.highlight %}<span class="badge is-highlight">{{ paper.highlight }}</span>{% endif %}

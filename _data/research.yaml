@@ -22,19 +22,19 @@ stages:
     image: "/assets/research/stages/target-v2.png"
     status: explore
     papers:
-      - { tag: "C4", label: "Confident reasoning" }
-      - { tag: "C1", label: "Diffusion for PPI graphs" }
+      - { tag: "P7", label: "Confident reasoning" }
+      - { tag: "P3", label: "Diffusion for PPI graphs" }
 
   - name: "Structure|Prediction"
     image: "/assets/research/stages/structure-v3.png"
     status: sota
-    sota_paper: "P2"
+    sota_paper: "P10"
     sota_figure: "/assets/research/soupfold_results.png"
     sota_caption: "Structure prediction success rates. SoupFold improves every base co-folding model on FoldBench and leads on GPCR and molecular glue complexes."
     papers:
-      - { tag: "P3", label: "K-Fold", venue: "Preprint&nbsp;2026" }
-      - { tag: "P2", label: "Soup of representations", venue: "NeurIPS&nbsp;2026<br>AI4DD Workshop" }
-      - { tag: "C6", label: "Pre-training representations" }
+      - { tag: "P11", label: "K-Fold", venue: "Preprint&nbsp;2026" }
+      - { tag: "P10", label: "Soup of representations", venue: "NeurIPS&nbsp;2026<br>AI4DD Workshop" }
+      - { tag: "P9", label: "Pre-training representations" }
 
   - name: "Binding|Affinity"
     image: "/assets/research/stages/affinity-v2.png"
@@ -44,17 +44,17 @@ stages:
     image: "/assets/research/stages/design-v2.png"
     status: active
     papers:
-      - { tag: "P1", label: "Diversified generation", venue: "Preprint&nbsp;2025" }
-      - { tag: "C3", label: "Pessimistic discovery" }
-      - { tag: "C2", label: "Credit assignments" }
-      - { tag: "J2", label: "Latent space exploration", venue: "JCAMD&nbsp;2024" }
+      - { tag: "P6", label: "Diversified generation", venue: "Preprint&nbsp;2025" }
+      - { tag: "P5", label: "Pessimistic discovery" }
+      - { tag: "P4", label: "Credit assignments" }
+      - { tag: "P2", label: "Latent space exploration", venue: "JCAMD&nbsp;2024" }
 
   - name: "ADME &|Toxicity"
     theme: teal
     image: "/assets/research/stages/admet-v2.png"
     status: sota
-    sota_paper: "C5"
+    sota_paper: "P8"
     sota_figure: "/assets/research/admet_results.png"
     sota_caption: "Win, draw and loss rates of co-folding model representations against five molecular representation baselines, across absorption, distribution, metabolism, excretion and toxicity tasks."
     papers:
-      - { tag: "C5", label: "Generalizable representations" }
+      - { tag: "P8", label: "Generalizable representations" }

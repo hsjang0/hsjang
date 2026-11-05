@@ -1,13 +1,14 @@
 # Publication list rendered on the home page.
 #
 # Fields
-#   title            : paper title (the [P#]/[C#]/[J#] tag is added automatically from `tag`)
-#   tag              : short reference key used in the bio text, e.g. P3, C4, J1;
+#   title            : paper title (the P# badge is added automatically from `tag`)
+#   tag              : unified paper reference key, e.g. P11, P10, P9;
 #                      omit it to list a paper without a reference number
 #   authors          : HTML allowed; wrap your own name in <span class='me'>...</span>
 #   author_role      : optional first/co-first label after your own name
 #   venue            : optional long-form venue line under the authors. Left unset
 #                      everywhere now, since the badge already names the venue
+#   venue_kind       : optional conference/journal/workshop badge palette
 #   venue_short      : compact label shown in the venue badge
 #   year             : publication year (shown in the badge); omit it for work in
 #                      progress so the badge reads just the venue_short label
@@ -24,7 +25,7 @@
 #   selected         : "y" to show on the home page
 papers:
 
-  - tag: "P3"
+  - tag: "P11"
     title: "Predicting Conformational Changes Induced by Biomolecular Interactions"
     authors: "Team KAIST (33 authors in alphabetical order)"
     note: "<strong>Hyosoon Jang</strong>: core contributor, leading the protein structure encoder and contributing evaluation &amp; analysis."
@@ -56,7 +57,7 @@ papers:
       - label: "Code"
         url: "https://github.com/kaist-ai-bio/kfold"
 
-  - tag: "P2"
+  - tag: "P10"
     title: "Co-folding with a Soup of Representations"
     authors: "<span class='me'>Hyosoon Jang</span>, Taewon Kim, Sungsoo Ahn"
     author_role: "first"
@@ -74,7 +75,8 @@ papers:
       - label: "Code"
         url: "https://github.com/hsjang0/soupfold"
 
-  - tag: "C6"
+  - tag: "P9"
+    venue_kind: "conference"
     title: "Atom-level Protein Representation Learning Improves Protein Structure Prediction"
     authors: "<span class='me'>Hyosoon Jang</span><sup>&Dagger;</sup>, Taewon Kim<sup>&Dagger;</sup>, Hyunjin Seo, Seonghwan Seo, Hyeongwoo Kim, Wonho Zhung, Mingyeong Shin, Wooyoun Kim, Sungsoo Ahn"
     author_role: "co-first"
@@ -97,7 +99,8 @@ papers:
       - label: "Models"
         url: "https://huggingface.co/k-fold-structure"
 
-  - tag: "C5"
+  - tag: "P8"
+    venue_kind: "conference"
     title: "A Systematic Evaluation of Co-folding Model Representations for Small-Molecule Learning"
     authors: "<span class='me'>Hyosoon Jang</span>, Hyunjin Seo, Honghui Kim, Seonghyun Park, Taewon Kim, Yunhui Jang, Sungsoo Ahn"
     author_role: "first"
@@ -113,7 +116,8 @@ papers:
       - label: "Code"
         url: "https://github.com/hsjang0/boltz-as-FM"
 
-  - tag: "C4"
+  - tag: "P7"
+    venue_kind: "conference"
     title: "Self-Training Large Language Models with Confident Reasoning"
     authors: "<span class='me'>Hyosoon Jang</span>, Yunhui Jang, Sungjae Lee, Jungseul Ok, Sungsoo Ahn"
     author_role: "first"
@@ -129,7 +133,7 @@ papers:
       - label: "Code"
         url: "https://github.com/hsjang0/CORE-PO"
 
-  - tag: "P1"
+  - tag: "P6"
     title: "Can LLMs Generate Diverse Molecules? Towards Alignment with Structural Diversity"
     authors: "<span class='me'>Hyosoon Jang</span>, Yunhui Jang, Jaehyung Kim, Sungsoo Ahn"
     author_role: "first"
@@ -143,7 +147,8 @@ papers:
       - label: "arXiv"
         url: "https://arxiv.org/abs/2410.03138"
 
-  - tag: "C3"
+  - tag: "P5"
+    venue_kind: "conference"
     title: "Pessimistic Backward Policy for GFlowNets"
     authors: "<span class='me'>Hyosoon Jang</span>, Yunhui Jang, Minsu Kim, Jinkyoo Park, Sungsoo Ahn"
     author_role: "first"
@@ -157,7 +162,8 @@ papers:
       - label: "Code"
         url: "https://github.com/hsjang0/Pessimistic-Backward-Policy-for-GFlowNets"
 
-  - tag: "C2"
+  - tag: "P4"
+    venue_kind: "conference"
     title: "Learning Energy Decomposition for Partial Inference in GFlowNets"
     authors: "<span class='me'>Hyosoon Jang</span>, Minsu Kim, Sungsoo Ahn"
     author_role: "first"
@@ -172,7 +178,8 @@ papers:
       - label: "Code"
         url: "https://github.com/hsjang0/LED-GFN"
 
-  - tag: "C1"
+  - tag: "P3"
+    venue_kind: "conference"
     title: "Diffusion Probabilistic Models for Structured Node Classification"
     authors: "<span class='me'>Hyosoon Jang</span>, Seonghyun Park, Sangwoo Mo, Sungsoo Ahn"
     author_role: "first"
@@ -186,7 +193,8 @@ papers:
       - label: "Code"
         url: "https://github.com/hsjang0/DPM-SNC"
 
-  - tag: "J2"
+  - tag: "P2"
+    venue_kind: "journal"
     title: "De novo Drug Design through Gradient-based Regularized Search in Information-theoretically Controlled Latent Space"
     authors: "<span class='me'>Hyosoon Jang</span>, Sangmin Seo, Sanghyun Park, Byung Ju Kim, Geon-Woo Choi, Jonghwan Choi, Chihyun Park"
     author_role: "first"
@@ -198,7 +206,8 @@ papers:
       - label: "Paper"
         url: "https://doi.org/10.1007/s10822-024-00571-3"
 
-  - tag: "J1"
+  - tag: "P1"
+    venue_kind: "journal"
     title: "Machine Learning Algorithms Using Systemic Inflammatory Markers for Predicting the Oncological Outcomes of Colorectal Cancer after Surgery"
     authors: "Songsoo Yang<sup>&Dagger;</sup>, <span class='me'>Hyosoon Jang</span><sup>&Dagger;</sup>, Inkyu Park<sup>&Dagger;</sup>, Sunhye Lee, Gaeul Oh, Chihyun Park, Jeonghyun Kang"
     author_role: "co-first"
